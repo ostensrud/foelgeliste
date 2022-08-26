@@ -7,30 +7,75 @@ import {
   isSaturday,
   isSunday,
 } from "date-fns";
+import { nb } from "date-fns/locale";
+
+interface TodayProps {
+  dagensDato: Date;
+}
+
+interface TomorrowProps extends TodayProps {}
+
+const Today = ({ dagensDato }: TodayProps) => {
+  const dagsnavn = format(dagensDato, "eeee", { locale: nb });
+  const ukenummer = getISOWeek(dagensDato);
+  const ukedag = getDay(dagensDato);
+  if (isSaturday(dagensDato) || isSunday(dagensDato)) {
+    return (
+      <>
+        <h2>
+          I dag er det <span className={"dagsnavn"}>{dagsnavn}</span>
+        </h2>
+        <p>Da har vi fri!</p>
+      </>
+    );
+  }
+  return (
+    <div>
+      <h2>
+        I dag er det <span className={"dagsnavn"}>{dagsnavn}</span>
+      </h2>
+      <p>{walkingSchedule[ukenummer][ukedag].fam1}</p>
+      <p>{walkingSchedule[ukenummer][ukedag].fam2}</p>
+    </div>
+  );
+};
+
+const Tomorrow = ({ dagensDato }: TomorrowProps) => {
+  const iMorgen = addDays(dagensDato, 1);
+  const dagsnavn = format(iMorgen, "eeee", { locale: nb });
+  const ukenummer = getISOWeek(iMorgen);
+  const ukedag = getDay(iMorgen);
+  if (isSaturday(iMorgen) || isSunday(iMorgen)) {
+    return (
+      <>
+        <h2>
+          I morgen er det <span className={"dagsnavn"}>{dagsnavn}</span>
+        </h2>
+        <p>Da har vi fri!</p>
+      </>
+    );
+  }
+  return (
+    <div>
+      <h2>
+        I morgen er det <span className={"dagsnavn"}>{dagsnavn}</span>
+      </h2>
+      <p>{walkingSchedule[ukenummer][ukedag].fam1}</p>
+      <p>{walkingSchedule[ukenummer][ukedag].fam2}</p>
+    </div>
+  );
+};
 
 const Walkers = () => {
   const dagensDato = new Date();
-  const ukenummer = getISOWeek(dagensDato);
+
   const ukedag = getDay(dagensDato);
   const nesteDag = addDays(dagensDato, 1);
 
-  if (isSaturday(dagensDato) || isSunday(dagensDato)) {
-    return <div>HELG! Ingen skal levere til skolen i dag!</div>;
-  }
-
-  if (isSaturday(nesteDag) || isSunday(nesteDag)) {
-    return <div>HELG! Ingen skal levere til skolen i morgen!</div>;
-  }
-
   return (
     <>
-      <span>Ukenummer: {ukenummer}</span>
-      <h2>Skal gaa i dag, {format(dagensDato, "dd.mm.yyyy")}</h2>
-      <div>{walkingSchedule[ukenummer][ukedag].fam1}</div>
-      <div>{walkingSchedule[ukenummer][ukedag].fam2}</div>
-      <h2>Skal gaa i morgen, {format(nesteDag, "dd.mm.yyyy")}</h2>
-      <div>{walkingSchedule[ukenummer][ukedag + 1].fam1}</div>
-      <div>{walkingSchedule[ukenummer][ukedag + 1].fam2}</div>
+      <Today dagensDato={dagensDato} />
+      <Tomorrow dagensDato={dagensDato} />
     </>
   );
 };
