@@ -5,3 +5,11 @@ body {
 .dagsnavn {
   text-transform: capitalize;
 }
+
+.current {
+  background-color: hsl(103, 100%, 76%);
+}
+
+.past_day {
+  opacity: 0.3;
+}
