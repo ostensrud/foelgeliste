@@ -4,6 +4,7 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+
   font-size: clamp(1.5rem, 5vw, 4rem);
 }
 
@@ -13,15 +14,11 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0;
-}
-
-.dagsnavn {
-  text-transform: capitalize;
+  margin-top: 0;
 }
 
 .current {
-  background-color: hsl(103, 100%, 76%);
+  background-color: hsl(103, 98%, 64%);
 }
 
 .past_day {
@@ -47,7 +44,7 @@ td {
   padding-block: 1rem;
 }
 
-h2 > .dato {
+.dato {
   font-size: 1rem;
   opacity: 0.7;
   margin-left: 0.5rem;

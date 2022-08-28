@@ -17,14 +17,14 @@ const Today = ({ dagensDato, walkingSchedule }: TodayProps) => {
   const heading = (
     <h2>
       I dag er det <span className={"dagsnavn"}>{dagsnavn}</span>
-      <span className={"dato"}>
-        ({format(dagensDato, "dd.MM.yyyy", { locale: nb })})
-      </span>
     </h2>
   );
   if (isSaturday(dagensDato) || isSunday(dagensDato)) {
     return (
       <Card>
+        <span className={"dato"}>
+          {format(dagensDato, "dd.MM.yyyy", { locale: nb })}
+        </span>
         {heading}
         <p>Da har vi fri!</p>
       </Card>
@@ -32,6 +32,9 @@ const Today = ({ dagensDato, walkingSchedule }: TodayProps) => {
   }
   return (
     <Card>
+      <span className={"dato"}>
+        {format(dagensDato, "dd.MM.yyyy", { locale: nb })}
+      </span>
       {heading}
       <p>{walkingSchedule[ukenummer][ukedag].fam1}</p>
       <p>{walkingSchedule[ukenummer][ukedag].fam2}</p>
