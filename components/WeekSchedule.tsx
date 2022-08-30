@@ -1,10 +1,11 @@
+import { WalkingScheduleType } from "../types/DayTypes";
 import { Card } from "./Card";
 
 interface Props {
-  walkingSchedule: Object;
-  displayWeek: Number;
-  currentDay: Number;
-  currentWeek: Number;
+  walkingSchedule: WalkingScheduleType;
+  displayWeek: number;
+  currentDay: number;
+  currentWeek: number;
 }
 
 const WeekSchedule = ({
@@ -29,7 +30,28 @@ const WeekSchedule = ({
           </tr>
         </thead>
         <tbody>
-          {Object.keys(walkingSchedule[displayWeek]).map((dag: string) => {
+          {walkingSchedule[displayWeek.toString()].map((dag, index) => {
+            const classes = () => {
+              if (currentDay === index + 1) {
+                return "current";
+              }
+              if (currentDay > index + 1 && !isFutureWeek) {
+                return "past_day";
+              }
+              return "";
+            };
+            return (
+              <tr
+                key={dag.familie1 + dag.familie2 + index}
+                className={classes()}
+              >
+                <td>{dager[index]}</td>
+                <td>{dag.familie1}</td>
+                <td>{dag.familie2}</td>
+              </tr>
+            );
+          })}
+          {/* {Object.keys(walkingSchedule[displayWeek]).map((dag: string) => {
             const classes = () => {
               if (currentDay === parseInt(dag, 10)) {
                 return "current";
@@ -46,7 +68,7 @@ const WeekSchedule = ({
                 <td>{walkingSchedule[displayWeek][dag].fam2}</td>
               </tr>
             );
-          })}
+          })} */}
         </tbody>
       </table>
     </Card>

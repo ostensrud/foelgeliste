@@ -1,6 +1,5 @@
-import { getDay, getISODay, getISOWeek, isSaturday, isSunday } from "date-fns";
-import { WeekScheduleProps } from "../types/DayTypes";
-import { Card } from "./Card";
+import { getISODay, getISOWeek, isSaturday, isSunday } from "date-fns";
+import { ScheduleProps } from "../types/DayTypes";
 import { WeekSchedule } from "./WeekSchedule";
 
 const Schedule = ({ dagensDato, walkingSchedule }: ScheduleProps) => {

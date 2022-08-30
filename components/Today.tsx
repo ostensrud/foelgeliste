@@ -1,19 +1,13 @@
 import { TodayProps } from "../types/DayTypes";
-import {
-  format,
-  getISOWeek,
-  getDay,
-  addDays,
-  isSaturday,
-  isSunday,
-} from "date-fns";
+import { format, getISOWeek, getDay, isSaturday, isSunday } from "date-fns";
 import { nb } from "date-fns/locale";
 import { Card } from "./Card";
 
 const Today = ({ dagensDato, walkingSchedule }: TodayProps) => {
   const dagsnavn = format(dagensDato, "eeee", { locale: nb });
-  const ukenummer = getISOWeek(dagensDato);
-  const ukedag = getDay(dagensDato);
+  const ukenummer: string = getISOWeek(dagensDato).toString();
+  const ukedag: number = getDay(dagensDato) - 1;
+
   const heading = (
     <h2>
       I dag er det <span className={"dagsnavn"}>{dagsnavn}</span>
@@ -36,8 +30,9 @@ const Today = ({ dagensDato, walkingSchedule }: TodayProps) => {
         {format(dagensDato, "dd.MM.yyyy", { locale: nb })}
       </span>
       {heading}
-      <p>{walkingSchedule[ukenummer][ukedag].fam1}</p>
-      <p>{walkingSchedule[ukenummer][ukedag].fam2}</p>
+      <p></p>
+      <p>{walkingSchedule[ukenummer][ukedag].familie1}</p>
+      <p>{walkingSchedule[ukenummer][ukedag].familie2}</p>
     </Card>
   );
 };

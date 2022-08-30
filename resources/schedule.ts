@@ -1,136 +1,138 @@
-const walkingSchedule = {
-  "34": {
-    "1": {
-      fam1: "Sonja",
-      fam2: "Olivia",
+import { WalkingScheduleType } from "../types/DayTypes";
+
+const walkingSchedule: WalkingScheduleType = {
+  "34": [
+    {
+      familie1: "Sonja",
+      familie2: "Olivia",
     },
-    "2": {
-      fam1: "Sonja",
-      fam2: "Olivia",
+    {
+      familie1: "Sonja",
+      familie2: "Olivia",
     },
-    "3": {
-      fam1: "Thea",
-      fam2: "Kristian",
+    {
+      familie1: "Thea",
+      familie2: "Kristian",
     },
-    "4": {
-      fam1: "Thea",
-      fam2: "Kristian",
+    {
+      familie1: "Thea",
+      familie2: "Kristian",
     },
-    "5": {
-      fam1: "Theo",
-      fam2: "Alfred",
+    {
+      familie1: "Theo",
+      familie2: "Alfred",
     },
-  },
-  "35": {
-    "1": {
-      fam1: "Sonja",
-      fam2: "Olivia",
+  ],
+  "35": [
+    {
+      familie1: "Sonja",
+      familie2: "Olivia",
     },
-    "2": {
-      fam1: "Theo",
-      fam2: "Alfred",
+    {
+      familie1: "Theo",
+      familie2: "Alfred",
     },
-    "3": {
-      fam1: "Sonja",
-      fam2: "Olivia",
+    {
+      familie1: "Sonja",
+      familie2: "Olivia",
     },
-    "4": {
-      fam1: "Thea",
-      fam2: "Kristian",
+    {
+      familie1: "Thea",
+      familie2: "Kristian",
     },
-    "5": {
-      fam1: "Theo",
-      fam2: "Alfred",
+    {
+      familie1: "Theo",
+      familie2: "Alfred",
     },
-  },
-  "36": {
-    "1": {
-      fam1: "Sonja",
-      fam2: "Olivia",
+  ],
+  "36": [
+    {
+      familie1: "Sonja",
+      familie2: "Olivia",
     },
-    "2": {
-      fam1: "Thea",
-      fam2: "Kristian",
+    {
+      familie1: "Thea",
+      familie2: "Kristian",
     },
-    "3": {
-      fam1: "Theo",
-      fam2: "Alfred",
+    {
+      familie1: "Theo",
+      familie2: "Alfred",
     },
-    "4": {
-      fam1: "Thea",
-      fam2: "Kristian",
+    {
+      familie1: "Thea",
+      familie2: "Kristian",
     },
-    "5": {
-      fam1: "Theo",
-      fam2: "Alfred",
+    {
+      familie1: "Theo",
+      familie2: "Alfred",
     },
-  },
-  "37": {
-    "1": {
-      fam1: "Sonja",
-      fam2: "Olivia",
+  ],
+  "37": [
+    {
+      familie1: "Sonja",
+      familie2: "Olivia",
     },
-    "2": {
-      fam1: "Sonja",
-      fam2: "Olivia",
+    {
+      familie1: "Sonja",
+      familie2: "Olivia",
     },
-    "3": {
-      fam1: "Thea",
-      fam2: "Kristian",
+    {
+      familie1: "Thea",
+      familie2: "Kristian",
     },
-    "4": {
-      fam1: "Thea",
-      fam2: "Kristian",
+    {
+      familie1: "Thea",
+      familie2: "Kristian",
     },
-    "5": {
-      fam1: "Theo",
-      fam2: "Alfred",
+    {
+      familie1: "Theo",
+      familie2: "Alfred",
     },
-  },
-  "38": {
-    "1": {
-      fam1: "Sonja",
-      fam2: "Olivia",
+  ],
+  "38": [
+    {
+      familie1: "Sonja",
+      familie2: "Olivia",
     },
-    "2": {
-      fam1: "Theo",
-      fam2: "Alfred",
+    {
+      familie1: "Theo",
+      familie2: "Alfred",
     },
-    "3": {
-      fam1: "Sonja",
-      fam2: "Olivia",
+    {
+      familie1: "Sonja",
+      familie2: "Olivia",
     },
-    "4": {
-      fam1: "Thea",
-      fam2: "Kristian",
+    {
+      familie1: "Thea",
+      familie2: "Kristian",
     },
-    "5": {
-      fam1: "Theo",
-      fam2: "Alfred",
+    {
+      familie1: "Theo",
+      familie2: "Alfred",
     },
-  },
-  "39": {
-    "1": {
-      fam1: "Sonja",
-      fam2: "Olivia",
+  ],
+  "39": [
+    {
+      familie1: "Sonja",
+      familie2: "Olivia",
     },
-    "2": {
-      fam1: "Thea",
-      fam2: "Kristian",
+    {
+      familie1: "Thea",
+      familie2: "Kristian",
     },
-    "3": {
-      fam1: "Theo",
-      fam2: "Alfred",
+    {
+      familie1: "Theo",
+      familie2: "Alfred",
     },
-    "4": {
-      fam1: "Thea",
-      fam2: "Kristian",
+    {
+      familie1: "Thea",
+      familie2: "Kristian",
     },
-    "5": {
-      fam1: "Theo",
-      fam2: "Alfred",
+    {
+      familie1: "Theo",
+      familie2: "Alfred",
     },
-  },
+  ],
 };
 
 export { walkingSchedule };

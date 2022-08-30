@@ -13,8 +13,8 @@ import { Card } from "./Card";
 const Tomorrow = ({ dagensDato, walkingSchedule }: TomorrowProps) => {
   const iMorgen = addDays(dagensDato, 1);
   const dagsnavn = format(iMorgen, "eeee", { locale: nb });
-  const ukenummer = getISOWeek(iMorgen);
-  const ukedag = getDay(iMorgen);
+  const ukenummer: string = getISOWeek(iMorgen).toString();
+  const ukedag: number = getDay(iMorgen) - 1;
   const heading = (
     <h2>
       I morgen er det <span className={"dagsnavn"}>{dagsnavn}</span>
@@ -37,8 +37,8 @@ const Tomorrow = ({ dagensDato, walkingSchedule }: TomorrowProps) => {
         {format(iMorgen, "dd.MM.yyyy", { locale: nb })}
       </span>
       {heading}
-      <p>{walkingSchedule[ukenummer][ukedag].fam1}</p>
-      <p>{walkingSchedule[ukenummer][ukedag].fam2}</p>
+      <p>{walkingSchedule[ukenummer][ukedag].familie1}</p>
+      <p>{walkingSchedule[ukenummer][ukedag].familie2}</p>
     </Card>
   );
 };
