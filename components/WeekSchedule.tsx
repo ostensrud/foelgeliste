@@ -45,7 +45,7 @@ const WeekSchedule = ({
                 key={dag.familie1 + dag.familie2 + index}
                 className={classes()}
               >
-                <td>{dager[index]}</td>
+                <td className={"ukedag"}>{dager[index]}</td>
                 <td>{dag.familie1}</td>
                 <td>{dag.familie2}</td>
               </tr>
