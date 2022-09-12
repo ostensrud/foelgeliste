@@ -79,11 +79,13 @@ td {
     background-color: hsl(0, 0%, 0%);
   }
 
-  .ukedag {
-    color: #961D4E;
-  }
-
   .current {
+    background-color: #a042ff;
     color: hsl(0, 0%, 0%);
   }
+
+  .ukedag {
+    font-weight: 300;
+  }
+
 }
