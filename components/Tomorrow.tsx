@@ -8,6 +8,7 @@ import {
 } from "date-fns";
 import { nb } from "date-fns/locale";
 import { TomorrowProps } from "../types/DayTypes";
+import { Lunch } from "./Assets";
 import { Card } from "./Card";
 
 const Tomorrow = ({ dagensDato, walkingSchedule }: TomorrowProps) => {
@@ -18,6 +19,7 @@ const Tomorrow = ({ dagensDato, walkingSchedule }: TomorrowProps) => {
   const heading = (
     <h2>
       I morgen er det <span className={"dagsnavn"}>{dagsnavn}</span>
+      {walkingSchedule[ukenummer].dager?.[ukedag].matservering ? <Lunch /> : ""}
     </h2>
   );
   if (isSaturday(iMorgen) || isSunday(iMorgen)) {
