@@ -2,6 +2,7 @@ import { TodayProps } from "../types/DayTypes";
 import { format, getISOWeek, getDay, isSaturday, isSunday } from "date-fns";
 import { nb } from "date-fns/locale";
 import { Card } from "./Card";
+import { Lunch } from "./Assets";
 
 const Today = ({ dagensDato, walkingSchedule }: TodayProps) => {
   const dagsnavn = format(dagensDato, "eeee", { locale: nb });
@@ -11,6 +12,7 @@ const Today = ({ dagensDato, walkingSchedule }: TodayProps) => {
   const heading = (
     <h2>
       I dag er det <span className={"dagsnavn"}>{dagsnavn}</span>
+      {walkingSchedule[ukenummer].dager?.[ukedag].matservering ? <Lunch /> : ""}
     </h2>
   );
   if (isSaturday(dagensDato) || isSunday(dagensDato)) {

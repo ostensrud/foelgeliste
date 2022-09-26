@@ -1,4 +1,5 @@
 import { WalkingScheduleType } from "../types/DayTypes";
+import { Lunch } from "./Assets";
 import { Card } from "./Card";
 
 interface Props {
@@ -35,7 +36,7 @@ const WeekSchedule = ({
         <thead>
           <tr>
             <th>Dag</th>
-            <th colSpan={2}>Ansvarlig</th>
+            <th colSpan={3}>Ansvarlig</th>
           </tr>
         </thead>
         <tbody>
@@ -57,6 +58,7 @@ const WeekSchedule = ({
                 <td className={"ukedag"}>{dager[index]}</td>
                 <td>{dag.familie1}</td>
                 <td>{dag.familie2}</td>
+                <td>{dag.matservering ? <Lunch /> : ""}</td>
               </tr>
             );
           })}

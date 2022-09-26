@@ -126,6 +126,7 @@ const walkingSchedule: WalkingScheduleType = {
       {
         familie1: "Sonja",
         familie2: "Olivia",
+        matservering: true,
       },
       {
         familie1: "Thea",
@@ -138,6 +139,7 @@ const walkingSchedule: WalkingScheduleType = {
       {
         familie1: "Thea",
         familie2: "Kristian",
+        matservering: true,
       },
       {
         familie1: "Theo",

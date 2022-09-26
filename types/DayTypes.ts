@@ -1,6 +1,7 @@
 interface DagType {
   familie1: string;
   familie2: string;
+  matservering?: boolean;
 }
 
 interface UkeType {
