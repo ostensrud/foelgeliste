@@ -31,8 +31,8 @@ const Today = ({ dagensDato, walkingSchedule }: TodayProps) => {
       </span>
       {heading}
       <p></p>
-      <p>{walkingSchedule[ukenummer][ukedag].familie1}</p>
-      <p>{walkingSchedule[ukenummer][ukedag].familie2}</p>
+      <p>{walkingSchedule[ukenummer].dager?.[ukedag].familie1}</p>
+      <p>{walkingSchedule[ukenummer].dager?.[ukedag].familie2}</p>
     </Card>
   );
 };

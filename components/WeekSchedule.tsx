@@ -19,6 +19,15 @@ const WeekSchedule = ({
   const isFutureWeek = displayWeek > currentWeek;
   const isPastWeek = displayWeek < currentWeek;
 
+  if (walkingSchedule[displayWeek.toString()].erFerieUke) {
+    return (
+      <Card>
+        <h2>Ukesoversikt for uke {displayWeek}</h2>
+        <div>Det er ferie!</div>
+      </Card>
+    );
+  }
+
   return (
     <Card>
       <h2>Ukesoversikt for uke {displayWeek}</h2>
@@ -30,7 +39,7 @@ const WeekSchedule = ({
           </tr>
         </thead>
         <tbody>
-          {walkingSchedule[displayWeek.toString()].map((dag, index) => {
+          {walkingSchedule[displayWeek.toString()].dager?.map((dag, index) => {
             const classes = () => {
               if (currentDay === index + 1) {
                 return "current";

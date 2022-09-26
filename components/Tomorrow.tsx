@@ -37,8 +37,8 @@ const Tomorrow = ({ dagensDato, walkingSchedule }: TomorrowProps) => {
         {format(iMorgen, "dd.MM.yyyy", { locale: nb })}
       </span>
       {heading}
-      <p>{walkingSchedule[ukenummer][ukedag].familie1}</p>
-      <p>{walkingSchedule[ukenummer][ukedag].familie2}</p>
+      <p>{walkingSchedule[ukenummer].dager?.[ukedag].familie1}</p>
+      <p>{walkingSchedule[ukenummer].dager?.[ukedag].familie2}</p>
     </Card>
   );
 };

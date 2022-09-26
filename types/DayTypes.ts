@@ -3,8 +3,13 @@ interface DagType {
   familie2: string;
 }
 
+interface UkeType {
+  erFerieUke?: boolean;
+  dager?: DagType[];
+}
+
 export interface WalkingScheduleType {
-  [key: string]: DagType[];
+  [key: string]: UkeType;
 }
 
 interface DayProps {
