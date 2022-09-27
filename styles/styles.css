@@ -74,8 +74,10 @@ td {
   color: #fff;
 }
 
-svg {
-  fill:hsl(0, 100%, 100%);
+.svg-icon {
+  height: 48px;
+  width: 48px;
+  fill: hsl(0, 0%, 0%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -88,7 +90,10 @@ svg {
     color: hsl(0, 0%, 0%);
   }
 
-  .current svg {
+  .svg-icon {
+    fill: hsl(0, 100%, 100%);
+  }
+  .current .svg-icon {
     fill:hsl(0, 0%, 0%);
   }
 
