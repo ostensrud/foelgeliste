@@ -8,8 +8,8 @@ import {
 } from "date-fns";
 import { nb } from "date-fns/locale";
 import { TomorrowProps } from "../types/DayTypes";
-import { Lunch } from "./Assets";
 import { Card } from "./Card";
+import { LunchDisplay } from "./LunchDisplay";
 
 const Tomorrow = ({ dagensDato, walkingSchedule }: TomorrowProps) => {
   const iMorgen = addDays(dagensDato, 1);
@@ -19,9 +19,24 @@ const Tomorrow = ({ dagensDato, walkingSchedule }: TomorrowProps) => {
   const heading = (
     <h2>
       I morgen er det <span className={"dagsnavn"}>{dagsnavn}</span>
-      {walkingSchedule[ukenummer].dager?.[ukedag].matservering ? <Lunch /> : ""}
+      <LunchDisplay
+        walkingSchedule={walkingSchedule}
+        ukedag={ukedag}
+        ukenummer={ukenummer}
+      />
     </h2>
   );
+  if (walkingSchedule[ukenummer].erFerieUke) {
+    return (
+      <Card>
+        <span className={"dato"}>
+          {format(dagensDato, "dd.MM.yyyy", { locale: nb })}
+        </span>
+        {heading}
+        Fri hele uka!
+      </Card>
+    );
+  }
   if (isSaturday(iMorgen) || isSunday(iMorgen)) {
     return (
       <Card>

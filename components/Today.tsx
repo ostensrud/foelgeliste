@@ -1,8 +1,8 @@
-import { TodayProps } from "../types/DayTypes";
+import { TodayProps, WalkingScheduleType } from "../types/DayTypes";
 import { format, getISOWeek, getDay, isSaturday, isSunday } from "date-fns";
 import { nb } from "date-fns/locale";
 import { Card } from "./Card";
-import { Lunch } from "./Assets";
+import { LunchDisplay } from "./LunchDisplay";
 
 const Today = ({ dagensDato, walkingSchedule }: TodayProps) => {
   const dagsnavn = format(dagensDato, "eeee", { locale: nb });
@@ -12,9 +12,24 @@ const Today = ({ dagensDato, walkingSchedule }: TodayProps) => {
   const heading = (
     <h2>
       I dag er det <span className={"dagsnavn"}>{dagsnavn}</span>
-      {walkingSchedule[ukenummer].dager?.[ukedag].matservering ? <Lunch /> : ""}
+      <LunchDisplay
+        walkingSchedule={walkingSchedule}
+        ukedag={ukedag}
+        ukenummer={ukenummer}
+      />
     </h2>
   );
+  if (walkingSchedule[ukenummer].erFerieUke) {
+    return (
+      <Card>
+        <span className={"dato"}>
+          {format(dagensDato, "dd.MM.yyyy", { locale: nb })}
+        </span>
+        {heading}
+        Fri hele uka!
+      </Card>
+    );
+  }
   if (isSaturday(dagensDato) || isSunday(dagensDato)) {
     return (
       <Card>
