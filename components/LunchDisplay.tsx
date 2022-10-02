@@ -11,7 +11,7 @@ export const LunchDisplay = ({
   ukenummer,
   ukedag,
 }: LunchDisplayType) => {
-  if (walkingSchedule[ukenummer].erFerieUke) {
+  if (walkingSchedule[ukenummer].erFerieUke || ukedag === -1) {
     return null;
   } else if (walkingSchedule[ukenummer].dager?.[ukedag].matservering) {
     return <Lunch />;

@@ -8,7 +8,6 @@ const Today = ({ dagensDato, walkingSchedule }: TodayProps) => {
   const dagsnavn = format(dagensDato, "eeee", { locale: nb });
   const ukenummer: string = getISOWeek(dagensDato).toString();
   const ukedag: number = getDay(dagensDato) - 1;
-
   const heading = (
     <h2>
       I dag er det <span className={"dagsnavn"}>{dagsnavn}</span>
