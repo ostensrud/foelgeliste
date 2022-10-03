@@ -7,9 +7,9 @@ import {
   isSunday,
 } from "date-fns";
 import { nb } from "date-fns/locale";
-import { TomorrowProps } from "../types/DayTypes";
-import { Card } from "./Card";
-import { LunchDisplay } from "./LunchDisplay";
+import { TomorrowProps } from "../../types/DayTypes";
+import { Card } from "../Card";
+import { LunchDisplay } from "../LunchDisplay";
 
 const Tomorrow = ({ dagensDato, walkingSchedule }: TomorrowProps) => {
   const iMorgen = addDays(dagensDato, 1);
@@ -18,45 +18,37 @@ const Tomorrow = ({ dagensDato, walkingSchedule }: TomorrowProps) => {
   const ukedag: number = getDay(iMorgen) - 1;
   const heading = (
     <h2>
-      I morgen er det <span className={"dagsnavn"}>{dagsnavn}</span>
+      I morgen er det {dagsnavn}
       <LunchDisplay
         walkingSchedule={walkingSchedule}
         ukedag={ukedag}
         ukenummer={ukenummer}
-        dagensDato={dagensDato}
+        dato={iMorgen}
       />
     </h2>
   );
+
+  let content;
   if (walkingSchedule[ukenummer].erFerieUke) {
-    return (
-      <Card>
-        <span className={"dato"}>
-          {format(dagensDato, "dd.MM.yyyy", { locale: nb })}
-        </span>
-        {heading}
-        Fri hele uka!
-      </Card>
+    content = <p>Fri hele uka!</p>;
+  } else if (isSaturday(iMorgen) || isSunday(iMorgen)) {
+    content = <p>Da har vi fri!</p>;
+  } else {
+    content = (
+      <>
+        <p>{walkingSchedule[ukenummer].dager?.[ukedag].familie1}</p>
+        <p>{walkingSchedule[ukenummer].dager?.[ukedag].familie2}</p>
+      </>
     );
   }
-  if (isSaturday(iMorgen) || isSunday(iMorgen)) {
-    return (
-      <Card>
-        <span className={"dato"}>
-          {format(iMorgen, "dd.MM.yyyy", { locale: nb })}
-        </span>
-        {heading}
-        <p>Da har vi fri!</p>
-      </Card>
-    );
-  }
+
   return (
     <Card>
       <span className={"dato"}>
         {format(iMorgen, "dd.MM.yyyy", { locale: nb })}
       </span>
       {heading}
-      <p>{walkingSchedule[ukenummer].dager?.[ukedag].familie1}</p>
-      <p>{walkingSchedule[ukenummer].dager?.[ukedag].familie2}</p>
+      {content}
     </Card>
   );
 };

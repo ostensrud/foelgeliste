@@ -6,13 +6,13 @@ interface LunchDisplayType {
   walkingSchedule: WalkingScheduleType;
   ukenummer: string;
   ukedag: number;
-  dagensDato: Date;
+  dato: Date;
 }
 export const LunchDisplay = ({
   walkingSchedule,
   ukenummer,
   ukedag,
-  dagensDato,
+  dato: dagensDato,
 }: LunchDisplayType) => {
   if (
     walkingSchedule[ukenummer].erFerieUke ||

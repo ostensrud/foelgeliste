@@ -1,7 +1,7 @@
 import { addDays, getDay } from "date-fns";
 import { walkingSchedule } from "../../resources/schedule";
 import { Today } from "../Today";
-import { Tomorrow } from "./../Tomorrow";
+import { Tomorrow } from "../Tomorrow";
 import { Schedule } from "./../Schedule";
 import { Summary } from "./../Summary";
 
