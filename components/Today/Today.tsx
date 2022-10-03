@@ -1,8 +1,8 @@
-import { TodayProps, WalkingScheduleType } from "../types/DayTypes";
+import { TodayProps, WalkingScheduleType } from "../../types/DayTypes";
 import { format, getISOWeek, getDay, isSaturday, isSunday } from "date-fns";
 import { nb } from "date-fns/locale";
-import { Card } from "./Card";
-import { LunchDisplay } from "./LunchDisplay";
+import { Card } from "../Card";
+import { LunchDisplay } from "../LunchDisplay";
 
 const Today = ({ dagensDato, walkingSchedule }: TodayProps) => {
   const dagsnavn = format(dagensDato, "eeee", { locale: nb });
@@ -10,7 +10,7 @@ const Today = ({ dagensDato, walkingSchedule }: TodayProps) => {
   const ukedag: number = getDay(dagensDato) - 1;
   const heading = (
     <h2>
-      I dag er det <span className={"dagsnavn"}>{dagsnavn}</span>
+      I dag er det {dagsnavn}
       <LunchDisplay
         walkingSchedule={walkingSchedule}
         ukedag={ukedag}
