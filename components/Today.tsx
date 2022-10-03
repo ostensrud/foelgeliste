@@ -15,6 +15,7 @@ const Today = ({ dagensDato, walkingSchedule }: TodayProps) => {
         walkingSchedule={walkingSchedule}
         ukedag={ukedag}
         ukenummer={ukenummer}
+        dagensDato={dagensDato}
       />
     </h2>
   );

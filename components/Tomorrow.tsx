@@ -23,6 +23,7 @@ const Tomorrow = ({ dagensDato, walkingSchedule }: TomorrowProps) => {
         walkingSchedule={walkingSchedule}
         ukedag={ukedag}
         ukenummer={ukenummer}
+        dagensDato={dagensDato}
       />
     </h2>
   );
