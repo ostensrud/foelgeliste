@@ -1,9 +1,9 @@
 import { isSaturday, isSunday } from "date-fns";
-import { WalkingScheduleType } from "../types/DayTypes";
+import { AarType, WalkingScheduleType } from "../types/DayTypes";
 import { Lunch } from "./Assets";
 
 interface LunchDisplayType {
-  walkingSchedule: WalkingScheduleType;
+  walkingSchedule: AarType;
   ukenummer: string;
   ukedag: number;
   dato: Date;

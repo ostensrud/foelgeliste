@@ -1,6 +1,6 @@
-import { TodayProps, WalkingScheduleType } from "../../types/DayTypes";
+import { TodayProps } from "../../types/DayTypes";
 import { format, getISOWeek, getDay, isSaturday, isSunday } from "date-fns";
-import { da, nb } from "date-fns/locale";
+import { nb } from "date-fns/locale";
 import { Card } from "../Card";
 import { LunchDisplay } from "../LunchDisplay";
 

@@ -9,13 +9,18 @@ interface UkeType {
   dager?: DagType[];
 }
 
-export interface WalkingScheduleType {
+export interface AarType {
   [key: string]: UkeType;
+}
+
+export interface WalkingScheduleType {
+  [key: string]: AarType;
 }
 
 interface DayProps {
   dagensDato: Date;
-  walkingSchedule: WalkingScheduleType;
+  // walkingSchedule: WalkingScheduleType;
+  walkingSchedule: AarType;
 }
 
 export interface TodayProps extends DayProps {}
