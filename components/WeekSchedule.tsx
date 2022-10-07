@@ -1,9 +1,9 @@
-import { WalkingScheduleType } from "../types/DayTypes";
+import { AarType, WalkingScheduleType } from "../types/DayTypes";
 import { Lunch } from "./Assets";
 import { Card } from "./Card";
 
 interface Props {
-  walkingSchedule: WalkingScheduleType;
+  walkingSchedule: AarType;
   displayWeek: number;
   currentDay: number;
   currentWeek: number;
