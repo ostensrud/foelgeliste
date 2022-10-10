@@ -1,10 +1,10 @@
-interface DagType {
+export interface DagType {
   familie1: string;
   familie2: string;
   matservering?: boolean;
 }
 
-interface UkeType {
+export interface UkeType {
   erFerieUke?: boolean;
   dager?: DagType[];
 }
@@ -17,7 +17,7 @@ export interface WalkingScheduleType {
   [key: string]: AarType;
 }
 
-interface DayProps {
+export interface DayProps {
   dagensDato: Date;
   // walkingSchedule: WalkingScheduleType;
   walkingSchedule: AarType;

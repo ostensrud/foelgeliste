@@ -11,7 +11,6 @@ const Walkers = () => {
 
   return (
     <>
-      <Summary dagensDato={dagensDato} />
       <Today dagensDato={dagensDato} walkingSchedule={walkingSchedule[aar]} />
       <Tomorrow
         dagensDato={dagensDato}

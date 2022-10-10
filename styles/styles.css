@@ -1,3 +1,10 @@
+:root {
+  --light-background: hsl(0, 100%, 100%);
+  --light-color: hsl(0, 100%, 100%);
+  --dark-background: hsl(0, 0%, 0%);
+  --dark-color: hsl(0, 0%, 0%);
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -12,7 +19,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0;
+  margin-block: 0;
 }
 
 .current {
@@ -48,7 +55,7 @@ td {
 }
 
 .card {
-  background-color: hsl(0, 100%, 100%);
+  background-color: var(--light-background);
   padding: 0 1rem 0.5rem;
   margin-bottom: 1.5rem;
 
@@ -70,8 +77,8 @@ td {
 
   width: 100%;
 
-  background-color: #000;
-  color: #fff;
+  background-color: var(--dark-background);
+  color: var(--light-color);
 }
 
 .svg-icon {
@@ -80,9 +87,18 @@ td {
   fill: hsl(0, 0%, 0%);
 }
 
+.komplett {
+  background-color: var(--light-background);
+  padding-inline: 1rem;
+}
+
+.ukesoversikt {
+  margin-top: 2rem;
+}
+
 @media (prefers-color-scheme: dark) {
   .card {
-    background-color: hsl(0, 0%, 0%);
+    background-color: var(--dark-background);
   }
 
   .current {
@@ -94,11 +110,10 @@ td {
     fill: hsl(0, 100%, 100%);
   }
   .current .svg-icon {
-    fill:hsl(0, 0%, 0%);
+    fill: hsl(0, 0%, 0%);
   }
 
   .ukedag {
     font-weight: 300;
   }
-
 }

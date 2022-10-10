@@ -32,7 +32,7 @@ const WeekSchedule = ({
   return (
     <Card>
       <h2>Ukesoversikt for uke {displayWeek}</h2>
-      <table>
+      <table className={"ukesoversikt"}>
         <thead>
           <tr>
             <th>Dag</th>
