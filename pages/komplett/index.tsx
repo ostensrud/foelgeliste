@@ -1,18 +1,12 @@
 import { walkingSchedule } from "../../resources/schedule";
 import { DagType } from "../../types/DayTypes";
 
-interface DagProps {
-  aar: string;
-  ukenummer: string;
-  index: number;
-  dag: DagType;
-}
-
-const Dagrad = ({ aar, ukenummer, index, dag }: DagProps) => {
+const Dagrad = ({ dag }: { dag: DagType }) => {
   return (
-    <div key={aar + "::" + ukenummer + "::" + index}>
-      {dag.familie1} - {dag.familie2}
-    </div>
+    <tr>
+      <td>{dag.familie1}</td>
+      <td>{dag.familie2}</td>
+    </tr>
   );
 };
 
@@ -24,13 +18,23 @@ interface UkeProps {
 const Ukerad = ({ aar, ukenummer }: UkeProps) => {
   return (
     <div key={aar + "::" + ukenummer}>
-      <h3>{ukenummer}</h3>
+      <h3>Uke {ukenummer}</h3>
       {walkingSchedule[aar][ukenummer].erFerieUke && <div>Ferieuke</div>}
-      <div>
-        {walkingSchedule[aar][ukenummer].dager?.map((dag, index) => (
-          <Dagrad aar={aar} ukenummer={ukenummer} index={index} dag={dag} />
-        ))}
-      </div>
+      {!walkingSchedule[aar][ukenummer].erFerieUke && (
+        <table>
+          <thead>
+            <tr>
+              <th>Familie 1</th>
+              <th>Familie 2</th>
+            </tr>
+          </thead>
+          <tbody>
+            {walkingSchedule[aar][ukenummer].dager?.map((dag, index) => (
+              <Dagrad dag={dag} key={aar + "::" + ukenummer + "::" + index} />
+            ))}
+          </tbody>
+        </table>
+      )}
     </div>
   );
 };
@@ -46,7 +50,11 @@ const Komplett = () => {
           <section key={aar}>
             <h2>{aar}</h2>
             {Object.keys(walkingSchedule[aar]).map((ukenummer) => (
-              <Ukerad aar={aar} ukenummer={ukenummer} />
+              <Ukerad
+                aar={aar}
+                ukenummer={ukenummer}
+                key={aar + "::" + ukenummer}
+              />
             ))}
           </section>
         );
