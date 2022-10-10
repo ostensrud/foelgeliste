@@ -9,7 +9,6 @@ body {
 
 a {
   color: inherit;
-  text-decoration: none;
 }
 
 * {
@@ -26,6 +25,6 @@ a {
     background-color: hsl(0, 0%, 25%);
   }
   h2 {
-    color: #A60067;
+    color: #a60067;
   }
 }

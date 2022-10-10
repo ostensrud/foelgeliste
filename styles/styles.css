@@ -69,9 +69,10 @@ td {
 }
 
 .summary {
+  display: flex;
+
   font-size: 1rem;
   margin: 0;
-  padding: 0.5rem;
   position: sticky;
   top: 0;
 
@@ -79,6 +80,19 @@ td {
 
   background-color: var(--dark-background);
   color: var(--light-color);
+}
+
+.summary > .weekNumber {
+  border-right: 2px solid var(--light-color);
+  padding: 1rem;
+}
+
+.summary > nav {
+  padding: 1rem;
+}
+
+.summary > nav > *:not(:last-child) {
+  margin-right: 1rem;
 }
 
 .svg-icon {

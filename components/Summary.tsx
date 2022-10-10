@@ -6,7 +6,7 @@ const Summary = () => {
   const ukenummer = getISOWeek(dagensDato);
   return (
     <section className="summary">
-      <span>Uke {ukenummer}</span>
+      <div className="weekNumber">Uke {ukenummer}</div>
       <nav>
         <Link href={"/"}>
           <a>Dagsoversikt</a>
