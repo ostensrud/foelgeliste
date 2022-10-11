@@ -1,5 +1,5 @@
 import { isSaturday, isSunday } from "date-fns";
-import { AarType, WalkingScheduleType } from "../types/DayTypes";
+import { AarType } from "../types/DayTypes";
 import { Lunch } from "./Assets";
 
 interface LunchDisplayType {
