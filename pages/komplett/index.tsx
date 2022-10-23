@@ -1,10 +1,19 @@
 import { getISOWeek } from "date-fns";
+import { Hideaway } from "../../components/hideaway";
 import { walkingSchedule } from "../../resources/schedule";
 import { DagType } from "../../types/DayTypes";
 
-const Dagrad = ({ dag }: { dag: DagType }) => {
+const Dagrad = ({
+  dag,
+  ukedagNummer,
+}: {
+  dag: DagType;
+  ukedagNummer: number;
+}) => {
+  const dager = ["Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag"];
   return (
     <tr>
+      <td className={"ukedag"}>{dager[ukedagNummer]}</td>
       <td>{dag.familie1}</td>
       <td>{dag.familie2}</td>
     </tr>
@@ -19,29 +28,38 @@ interface UkeProps {
 
 const Ukerad = (props: UkeProps) => {
   const { aar, ukenummer, innevaerendeUke } = props;
+  const visUke =
+    Number.parseInt(ukenummer, 10) >= Number.parseInt(innevaerendeUke, 10);
   return (
-    <div
-      key={aar + "::" + ukenummer}
-      className={`uke ${innevaerendeUke === ukenummer ? "currentWeek" : ""}`}
+    <Hideaway
+      title={<h3>Uke {ukenummer}</h3>}
+      classNames={`uke ${innevaerendeUke === ukenummer ? "currentWeek" : ""}`}
+      isOpen={visUke}
     >
-      <h3>Uke {ukenummer}</h3>
-      {walkingSchedule[aar][ukenummer].erFerieUke && <div>Ferieuke</div>}
-      {!walkingSchedule[aar][ukenummer].erFerieUke && (
-        <table>
-          <thead>
-            <tr>
-              <th>Familie 1</th>
-              <th>Familie 2</th>
-            </tr>
-          </thead>
-          <tbody>
-            {walkingSchedule[aar][ukenummer].dager?.map((dag, index) => (
-              <Dagrad dag={dag} key={aar + "::" + ukenummer + "::" + index} />
-            ))}
-          </tbody>
-        </table>
-      )}
-    </div>
+      <>
+        {walkingSchedule[aar][ukenummer].erFerieUke && <div>Ferieuke</div>}
+        {!walkingSchedule[aar][ukenummer].erFerieUke && (
+          <table>
+            <thead>
+              <tr>
+                <th>Dag</th>
+                <th>Familie 1</th>
+                <th>Familie 2</th>
+              </tr>
+            </thead>
+            <tbody>
+              {walkingSchedule[aar][ukenummer].dager?.map((dag, index) => (
+                <Dagrad
+                  dag={dag}
+                  ukedagNummer={index}
+                  key={aar + "::" + ukenummer + "::" + index}
+                />
+              ))}
+            </tbody>
+          </table>
+        )}
+      </>
+    </Hideaway>
   );
 };
 
