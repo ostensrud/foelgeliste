@@ -109,7 +109,25 @@ td {
 
 .komplett {
   background-color: var(--light-background);
+  margin-top: 1rem;
   padding-inline: 1rem;
+}
+
+.uke {
+  margin-block: 1rem;
+}
+
+.uke > h3 {
+  background-color: hsl(0, 0%, 58%);
+  color: #000;
+  padding-inline: 1rem;
+  margin-inline: -1rem;
+  margin-bottom: 0.5rem;
+}
+
+.uke.currentWeek > h3 {
+  background-color: rgb(0, 0, 0);
+  color: hsl(0, 0%, 100%);
 }
 
 .ukesoversikt {
@@ -142,5 +160,15 @@ td {
 
   .komplett {
     background-color: var(--dark-background);
+  }
+
+  .uke > h3 {
+    background-color: hsla(270, 100%, 63%, 0.4);
+    color:hsl(0, 100%, 100%, 0.4);
+  }
+  
+  .uke.currentWeek > h3 {
+    background-color: hsla(270, 100%, 63%);
+    color: hsl(0, 0%, 0%);
   }
 }

@@ -1,3 +1,4 @@
+import { getISOWeek } from "date-fns";
 import { walkingSchedule } from "../../resources/schedule";
 import { DagType } from "../../types/DayTypes";
 
@@ -13,11 +14,16 @@ const Dagrad = ({ dag }: { dag: DagType }) => {
 interface UkeProps {
   aar: string;
   ukenummer: string;
+  innevaerendeUke: string;
 }
 
-const Ukerad = ({ aar, ukenummer }: UkeProps) => {
+const Ukerad = (props: UkeProps) => {
+  const { aar, ukenummer, innevaerendeUke } = props;
   return (
-    <div key={aar + "::" + ukenummer}>
+    <div
+      key={aar + "::" + ukenummer}
+      className={`uke ${innevaerendeUke === ukenummer ? "currentWeek" : ""}`}
+    >
       <h3>Uke {ukenummer}</h3>
       {walkingSchedule[aar][ukenummer].erFerieUke && <div>Ferieuke</div>}
       {!walkingSchedule[aar][ukenummer].erFerieUke && (
@@ -42,6 +48,7 @@ const Ukerad = ({ aar, ukenummer }: UkeProps) => {
 const Komplett = () => {
   const plan = walkingSchedule;
   const aarsliste = Object.keys(plan);
+  const innevaerendeUke = getISOWeek(new Date());
 
   return (
     <main className={"komplett"}>
@@ -54,6 +61,7 @@ const Komplett = () => {
                 aar={aar}
                 ukenummer={ukenummer}
                 key={aar + "::" + ukenummer}
+                innevaerendeUke={innevaerendeUke.toString()}
               />
             ))}
           </section>
