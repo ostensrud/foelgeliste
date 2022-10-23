@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { subDays } from "date-fns";
-import { WalkingScheduleType } from "../../types/DayTypes";
+import { AarType } from "../../types/DayTypes";
 import { Tomorrow } from "./Tomorrow";
 
 describe("Tomorrow", () => {
@@ -10,7 +10,7 @@ describe("Tomorrow", () => {
   const ukenummer = "40";
   const nesteUke = "41";
 
-  const schedule: WalkingScheduleType = {
+  const schedule: AarType = {
     [ukenummer]: {
       dager: [
         { familie1: "Familie 1", familie2: "Familie 2" },
