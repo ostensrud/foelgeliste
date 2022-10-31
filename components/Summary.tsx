@@ -8,12 +8,8 @@ const Summary = () => {
     <section className="summary">
       <div className="weekNumber">Uke {ukenummer}</div>
       <nav>
-        <Link href={"/"}>
-          <a>Dagsoversikt</a>
-        </Link>
-        <Link href={"/komplett"}>
-          <a>Komplett oversikt</a>
-        </Link>
+        <Link href={"/"}>Dagsoversikt</Link>
+        <Link href={"/komplett"}>Komplett oversikt</Link>
       </nav>
     </section>
   );
