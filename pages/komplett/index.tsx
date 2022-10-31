@@ -1,4 +1,5 @@
 import { getISOWeek } from "date-fns";
+import { Lunch } from "../../components/Assets";
 import { Hideaway } from "../../components/hideaway";
 import { walkingSchedule } from "../../resources/schedule";
 import { DagType } from "../../types/DayTypes";
@@ -16,6 +17,7 @@ const Dagrad = ({
       <td className={"ukedag"}>{dager[ukedagNummer]}</td>
       <td>{dag.familie1}</td>
       <td>{dag.familie2}</td>
+      <td>{ukedagNummer === 0 || ukedagNummer === 3 ? <Lunch /> : ""}</td>
     </tr>
   );
 };
@@ -45,6 +47,7 @@ const Ukerad = (props: UkeProps) => {
                 <th>Dag</th>
                 <th>Familie 1</th>
                 <th>Familie 2</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>

@@ -20,7 +20,7 @@ export const LunchDisplay = ({
     isSunday(dagensDato)
   ) {
     return null;
-  } else if (walkingSchedule[ukenummer].dager?.[ukedag].matservering) {
+  } else if (ukedag === 0 || ukedag === 3) {
     return <Lunch />;
   }
   return null;

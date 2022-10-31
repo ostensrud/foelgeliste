@@ -58,7 +58,7 @@ const WeekSchedule = ({
                 <td className={"ukedag"}>{dager[index]}</td>
                 <td>{dag.familie1}</td>
                 <td>{dag.familie2}</td>
-                <td>{dag.matservering ? <Lunch /> : ""}</td>
+                <td>{index === 0 || index === 3 ? <Lunch /> : ""}</td>
               </tr>
             );
           })}
