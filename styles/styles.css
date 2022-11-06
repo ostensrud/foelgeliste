@@ -144,27 +144,6 @@ svg.expanded {
   transform: rotateX(180deg);
 }
 
-/* .uke > button {
-  border: none;
-  background-color: transparent;
-  padding: 0;
-  width: 100%;
-  font-size: 2rem;
-}
-
-.uke > button > h3 {
-  background-color: hsl(0, 0%, 58%);
-  color: #000;
-  padding-inline: 1rem;
-  margin-inline: -1rem;
-  margin-bottom: 0.5rem;
-}
-
-.uke.currentWeek > button > h3 {
-  background-color: rgb(0, 0, 0);
-  color: hsl(0, 0%, 100%);
-} */
-
 .ukesoversikt {
   margin-top: 2rem;
 }
