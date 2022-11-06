@@ -42,6 +42,7 @@ table {
   table-layout: fixed;
   width: 100%;
   border-collapse: collapse;
+  margin-top: 1rem;
 }
 
 th,
@@ -117,7 +118,23 @@ td {
   margin-block: 1rem;
 }
 
-.uke > button {
+.hideaway > button {
+  border: none;
+  background-color: hsl(0, 0%, 58%);
+  width: 100%;
+  font-size: 2rem;
+}
+
+.currentWeek > button {
+  background-color: rgb(0, 0, 0);
+  color: var(--light-color);
+}
+
+.currentWeek > button > svg {
+  fill: var(--light-color);
+}
+
+/* .uke > button {
   border: none;
   background-color: transparent;
   padding: 0;
@@ -136,7 +153,7 @@ td {
 .uke.currentWeek > button > h3 {
   background-color: rgb(0, 0, 0);
   color: hsl(0, 0%, 100%);
-}
+} */
 
 .ukesoversikt {
   margin-top: 2rem;
@@ -170,13 +187,21 @@ td {
     background-color: var(--dark-background);
   }
 
-  .uke > button > h3 {
+  .hideaway > button {
     background-color: hsla(270, 100%, 63%, 0.4);
     color:hsl(0, 100%, 100%, 0.4);
   }
   
-  .uke.currentWeek > button > h3 {
+  .hideaway > button > svg {
+    fill: hsl(0, 100%, 100%, 0.4);
+  }
+
+  .currentWeek > button {
     background-color: hsla(270, 100%, 63%);
     color: hsl(0, 0%, 0%);
+  }
+
+  .currentWeek > button > svg {
+    fill: var(--dark-color);
   }
 }
