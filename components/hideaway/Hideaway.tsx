@@ -17,7 +17,7 @@ const Hideaway = (props: HideawayProps) => {
     <section className={classes}>
       <button type={"button"} onClick={() => toggleVisInnhold(!visInnhold)}>
         {props.title}
-        <ExpandMore />
+        <ExpandMore classNames={visInnhold ? "expanded" : "hidden"} />
       </button>
       {visInnhold && props.children}
     </section>
