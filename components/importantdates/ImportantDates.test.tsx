@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { addDays, format } from "date-fns";
+import { addDays, format, subDays } from "date-fns";
 import { ImportantDateType } from "../../types/ImportantDatesTypes";
 import { ImportantDates } from "./ImportantDates";
 
@@ -20,5 +20,23 @@ describe("Important Dates", () => {
     expect(
       screen.getByText("Vi skal ha vannski-dag! Husk vannski.")
     ).toBeVisible();
+  });
+
+  test("tegner ingenting når det ikke finnes noen data", () => {
+    const { container } = render(<ImportantDates data={[]} />);
+    expect(container.firstChild).toBeNull();
+  });
+
+  test("tegner ingenting når datoen er i fortiden", () => {
+    const dato = subDays(new Date(), 8);
+    const data: ImportantDateType[] = [
+      {
+        date: dato,
+        title: "Skidag!",
+        description: "Vi skal ha vannski-dag! Husk vannski.",
+      },
+    ];
+    const { container } = render(<ImportantDates data={data} />);
+    expect(container.firstChild).toBeNull();
   });
 });
