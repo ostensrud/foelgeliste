@@ -39,4 +39,17 @@ describe("Important Dates", () => {
     const { container } = render(<ImportantDates data={data} />);
     expect(container.firstChild).toBeNull();
   });
+
+  test("tegner ingenting når datoen er mer enn en uke frem i tid", () => {
+    const dato = addDays(new Date(), 8);
+    const data: ImportantDateType[] = [
+      {
+        date: dato,
+        title: "Skidag!",
+        description: "Vi skal ha vindski-dag! Husk vindski.",
+      },
+    ];
+    const { container } = render(<ImportantDates data={data} />);
+    expect(container.firstChild).toBeNull();
+  });
 });

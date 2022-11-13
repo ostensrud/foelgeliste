@@ -1,4 +1,4 @@
-import { format, isPast } from "date-fns";
+import { addDays, format, isAfter, isPast } from "date-fns";
 import { ImportantDateType } from "../../types/ImportantDatesTypes";
 
 interface ImportantDateProps {
@@ -11,7 +11,7 @@ interface ImportantDatesProps {
 
 const ImportantDate = (props: ImportantDateProps) => {
   const { date } = props;
-  if (isPast(date.date)) {
+  if (isPast(date.date) || isAfter(date.date, addDays(new Date(), 7))) {
     return null;
   }
   return (
