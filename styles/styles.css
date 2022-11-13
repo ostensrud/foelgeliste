@@ -151,8 +151,11 @@ svg.expanded {
 .flashCard {
   padding: 0 1rem 0.5rem;
   margin: 0.5rem;
-  border: 0.5rem solid #000;
+  border: 0.5rem solid #fff;
   border-radius: 20px;
+
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(0, 100%, 100%);
 }
 
 .label {
@@ -214,5 +217,6 @@ svg.expanded {
   .flashCard {
     background-color: #a60067;
     color: hsl(0, 0%, 0%);
+    border-color: hsl(0, 0%, 0%);
   }
 }
