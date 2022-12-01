@@ -52,4 +52,19 @@ describe("Important Dates", () => {
     const { container } = render(<ImportantDates data={data} />);
     expect(container.firstChild).toBeNull();
   });
+
+  test("viser meldingen når datoen er i dag", () => {
+    const iDag = new Date();
+    const data: ImportantDateType[] = [
+      {
+        date: iDag,
+        title: "Windsurfing dag!",
+        description: "Ta med windsurf-utstyr!",
+      },
+    ];
+    render(<ImportantDates data={data} />);
+    expect(screen.getByText(format(iDag, "dd.MM.yyyy"))).toBeVisible();
+    expect(screen.getByText("Windsurfing dag!")).toBeVisible();
+    expect(screen.getByText("Ta med windsurf-utstyr!")).toBeVisible();
+  });
 });

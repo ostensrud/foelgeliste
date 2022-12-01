@@ -1,4 +1,4 @@
-import { addDays, format, isAfter, isPast } from "date-fns";
+import { addDays, endOfDay, format, isAfter, isPast } from "date-fns";
 import { ImportantDateType } from "../../types/ImportantDatesTypes";
 
 interface ImportantDateProps {
@@ -11,7 +11,10 @@ interface ImportantDatesProps {
 
 const ImportantDate = (props: ImportantDateProps) => {
   const { date } = props;
-  if (isPast(date.date) || isAfter(date.date, addDays(new Date(), 7))) {
+  if (
+    isPast(endOfDay(date.date)) ||
+    isAfter(endOfDay(date.date), addDays(new Date(), 7))
+  ) {
     return null;
   }
   return (
@@ -19,7 +22,9 @@ const ImportantDate = (props: ImportantDateProps) => {
       <h2>{date.title}</h2>
       <div className={"grid-box"}>
         <span className={"label"}>Når?</span>
-        <span className={"value"}>{format(date.date, "dd.MM.yyyy")}</span>
+        <span className={"value"}>
+          {format(new Date(date.date), "dd.MM.yyyy")}
+        </span>
         <span className={"label"}>Hva skjer?</span>
         <span className={"value"}> {date.description}</span>
       </div>
