@@ -19,6 +19,11 @@ const importantDates: ImportantDateType[] = [
     description:
       "Tirsdag 13. desember skal 1. trinn gå i Lucia-tog. Da ønsker vi at barna kler seg i hvitt. Skolen stiller med lys og glitter. Dere trenger ikke å gå til innkjøp av noe nytt tøy, en stor hvit t-skjorte er også fint.",
   },
+  {
+    date: new Date("2022-12-21"),
+    title: "Julelunsj",
+    description: "Gutter tar med oppskåret frukt, jenter tar med kjeks.",
+  },
 ];
 
 export { importantDates };
