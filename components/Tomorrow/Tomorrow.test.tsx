@@ -54,4 +54,28 @@ describe("Tomorrow", () => {
     expect(screen.getByText(/^Familie 4$/)).toBeVisible();
     expect(screen.getByText(/^Familie 5$/)).toBeVisible();
   });
+
+  test("viser melding om fri på enkelt-dager som er markert med fri", () => {
+    const ukenummer = "40";
+    const schedule: AarType = {
+      [ukenummer]: {
+        dager: [
+          {
+            familie1: "Familie 1",
+            familie2: "Familie 2",
+          },
+          {
+            familie1: "Familie 1",
+            familie2: "Familie 2",
+            erFridag: true,
+            beskrivelseAvFridag: "Julefri!",
+          },
+        ],
+      },
+    };
+
+    render(<Tomorrow dagensDato={enMandag} walkingSchedule={schedule} />);
+    expect(screen.getByText(/^I morgen er det tirsdag$/)).toBeVisible();
+    expect(screen.getByText(/^Julefri!$/)).toBeVisible();
+  });
 });

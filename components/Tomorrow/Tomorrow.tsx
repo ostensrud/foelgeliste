@@ -33,6 +33,13 @@ const Tomorrow = ({ dagensDato, walkingSchedule }: TomorrowProps) => {
     content = <p>Fri hele uka!</p>;
   } else if (isSaturday(iMorgen) || isSunday(iMorgen)) {
     content = <p>Da har vi fri!</p>;
+  } else if (walkingSchedule[ukenummer].dager?.[ukedag].erFridag) {
+    content = (
+      <p>
+        {walkingSchedule[ukenummer].dager?.[ukedag].beskrivelseAvFridag ||
+          "Fridag"}
+      </p>
+    );
   } else {
     content = (
       <>
