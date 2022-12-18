@@ -1,7 +1,9 @@
 export interface DagType {
   familie1: string;
   familie2: string;
-  matservering?: boolean;
+  matservering?: boolean; // deprecated
+  erFridag?: boolean;
+  beskrivelseAvFridag?: string;
 }
 
 export interface UkeType {
@@ -19,7 +21,6 @@ export interface WalkingScheduleType {
 
 export interface DayProps {
   dagensDato: Date;
-  // walkingSchedule: WalkingScheduleType;
   walkingSchedule: AarType;
 }
 

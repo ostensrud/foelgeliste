@@ -13,6 +13,13 @@ const Today = ({ dagensDato, walkingSchedule }: TodayProps) => {
     content = <p>Fri hele uka!</p>;
   } else if (isSaturday(dagensDato) || isSunday(dagensDato)) {
     content = <p>Da har vi fri!</p>;
+  } else if (walkingSchedule[ukenummer].dager?.[ukedag].erFridag) {
+    content = (
+      <p>
+        {walkingSchedule[ukenummer].dager?.[ukedag].beskrivelseAvFridag ||
+          "Fridag"}
+      </p>
+    );
   } else {
     content = (
       <>

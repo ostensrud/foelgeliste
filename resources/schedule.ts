@@ -408,12 +408,19 @@ const walkingSchedule: WalkingScheduleType = {
         {
           familie1: "Kristian",
           familie2: "Thea",
+          erFridag: true,
+          beskrivelseAvFridag: "Juleferie!",
         },
         {
           familie1: "Alfred",
           familie2: "Theo",
+          erFridag: true,
+          beskrivelseAvFridag: "Juleferie!",
         },
       ],
+    },
+    "52": {
+      erFerieUke: true,
     },
   },
   "2023": {
@@ -422,6 +429,8 @@ const walkingSchedule: WalkingScheduleType = {
         {
           familie1: "Sonja",
           familie2: "Olivia",
+          erFridag: true,
+          beskrivelseAvFridag: "Planleggingsdag.",
         },
         {
           familie1: "Sonja",
