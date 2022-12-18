@@ -9,6 +9,14 @@ const DayRow = ({
   ukedagNummer: number;
 }) => {
   const dager = ["Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag"];
+  if (dag.erFridag) {
+    return (
+      <tr>
+        <td className={"ukedag"}>{dager[ukedagNummer]}</td>
+        <td colSpan={3}>{dag.beskrivelseAvFridag}</td>
+      </tr>
+    );
+  }
   return (
     <tr>
       <td className={"ukedag"}>{dager[ukedagNummer]}</td>

@@ -50,6 +50,14 @@ const WeekSchedule = ({
               }
               return "";
             };
+            if (dag.erFridag) {
+              return (
+                <tr key={dag.familie1 + dag.familie2 + index}>
+                  <td className={"ukedag"}>{dager[index]}</td>
+                  <td colSpan={3}>{dag.beskrivelseAvFridag}</td>
+                </tr>
+              );
+            }
             return (
               <tr
                 key={dag.familie1 + dag.familie2 + index}
