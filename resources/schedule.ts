@@ -424,6 +424,9 @@ const walkingSchedule: WalkingScheduleType = {
     },
   },
   "2023": {
+    "52": {
+      erFerieUke: true,
+    },
     "1": {
       dager: [
         {

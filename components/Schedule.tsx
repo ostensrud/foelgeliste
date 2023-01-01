@@ -1,6 +1,17 @@
-import { getISODay, getISOWeek, isSaturday, isSunday } from "date-fns";
+import {
+  addWeeks,
+  getISODay,
+  getISOWeek,
+  isSaturday,
+  isSunday,
+} from "date-fns";
+
 import { ScheduleProps } from "../types/DayTypes";
 import { WeekSchedule } from "./WeekSchedule";
+
+const getNextWeek = (dagensDato: Date): number => {
+  return getISOWeek(addWeeks(dagensDato, 1));
+};
 
 const Schedule = ({ dagensDato, walkingSchedule }: ScheduleProps) => {
   const dagsnummer = getISODay(dagensDato);
@@ -9,7 +20,7 @@ const Schedule = ({ dagensDato, walkingSchedule }: ScheduleProps) => {
     return (
       <WeekSchedule
         currentDay={dagsnummer}
-        displayWeek={ukenummer + 1}
+        displayWeek={getNextWeek(dagensDato)}
         currentWeek={ukenummer}
         walkingSchedule={walkingSchedule}
       />
