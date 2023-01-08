@@ -1,3 +1,4 @@
+import { getYear } from "date-fns";
 import { WalkingScheduleType } from "../../../types/DayTypes";
 import { Hideaway } from "../../hideaway";
 import { DayRow } from "../dayrow";
@@ -12,7 +13,9 @@ interface WeekProps {
 const WeekRow = (props: WeekProps) => {
   const { aar, ukenummer, innevaerendeUke } = props;
   const visUke =
+    getYear(new Date()) === Number.parseInt(aar, 10) &&
     Number.parseInt(ukenummer, 10) >= Number.parseInt(innevaerendeUke, 10);
+
   return (
     <Hideaway
       title={<h3>Uke {ukenummer}</h3>}
