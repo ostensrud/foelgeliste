@@ -6,11 +6,10 @@
   --box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
     0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
     0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
-  --box-shadow-dark: 0 1px 1px hsl(323deg 100% 33% / 0.075),
-    0 2px 2px hsl(323deg 100% 33% / 0.075),
-    0 4px 4px hsl(323deg 100% 33% / 0.075),
-    0 8px 8px hsl(323deg 100% 33% / 0.075),
-    0 16px 16px hsl(323deg 100% 33% / 0.075);
+  --box-shadow-dark: 0 1px 1px hsl(207deg 74% 50% / 0.075),
+    0 2px 2px hsl(207deg 74% 50% / 0.075), 0 4px 4px hsl(207deg 74% 50% / 0.075),
+    0 8px 8px hsl(207deg 74% 50% / 0.075),
+    0 16px 16px hsl(207deg 74% 50% / 0.075);
 }
 
 body {
@@ -169,6 +168,16 @@ svg.expanded {
 }
 
 @media (prefers-color-scheme: dark) {
+  h2 {
+    background-image: linear-gradient(
+      90deg,
+      hsl(187, 91%, 47%),
+      hsl(241, 65%, 54%)
+    );
+    background-clip: text;
+    color: transparent;
+  }
+
   .summary {
     box-shadow: var(--box-shadow-dark);
   }
@@ -177,7 +186,11 @@ svg.expanded {
   }
 
   .current {
-    background-color: #a042ff;
+    background-image: linear-gradient(
+      90deg,
+      hsl(187, 91%, 47%),
+      hsl(241, 65%, 54%)
+    );
     color: hsl(0, 0%, 0%);
   }
 
