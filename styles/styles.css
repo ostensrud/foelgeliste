@@ -10,6 +10,11 @@
     0 2px 2px hsl(207deg 74% 50% / 0.075), 0 4px 4px hsl(207deg 74% 50% / 0.075),
     0 8px 8px hsl(207deg 74% 50% / 0.075),
     0 16px 16px hsl(207deg 74% 50% / 0.075);
+  --dark-gradient-background: linear-gradient(
+    90deg,
+    hsl(187, 91%, 47%),
+    hsl(241, 65%, 54%)
+  );
 }
 
 body {
@@ -169,11 +174,7 @@ svg.expanded {
 
 @media (prefers-color-scheme: dark) {
   h2 {
-    background-image: linear-gradient(
-      90deg,
-      hsl(187, 91%, 47%),
-      hsl(241, 65%, 54%)
-    );
+    background-image: var(--dark-gradient-background);
     background-clip: text;
     color: transparent;
   }
@@ -186,11 +187,7 @@ svg.expanded {
   }
 
   .current {
-    background-image: linear-gradient(
-      90deg,
-      hsl(187, 91%, 47%),
-      hsl(241, 65%, 54%)
-    );
+    background-image: var(--dark-gradient-background);
     color: hsl(0, 0%, 0%);
   }
 
@@ -210,25 +207,33 @@ svg.expanded {
   }
 
   .hideaway > button {
-    background-color: hsla(270, 100%, 63%, 0.4);
-    color: hsl(0, 100%, 100%, 0.4);
+    background-image: linear-gradient(
+      90deg,
+      hsl(187 91% 27%),
+      hsl(241 65% 34%)
+    );
+    color: hsl(0, 100%, 100%, 0.6);
   }
 
   .hideaway > button > svg {
     fill: hsl(0, 100%, 100%, 0.4);
   }
 
-  .currentWeek > button {
-    background-color: hsla(270, 100%, 63%);
-    color: hsl(0, 0%, 0%);
+  .hideaway.currentWeek > button {
+    background-image: var(--dark-gradient-background);
+    color: hsl(0, 100%, 100%);
   }
 
   .currentWeek > button > svg {
-    fill: var(--dark-color);
+    fill: var(--light-color);
   }
 
   .flashCard {
-    background-color: #a60067;
+    background-image: linear-gradient(
+      45deg,
+      hsl(187, 91%, 47%),
+      hsl(241, 65%, 54%)
+    );
     color: hsl(0, 0%, 0%);
     border-color: hsl(0, 0%, 0%);
   }
