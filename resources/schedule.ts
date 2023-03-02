@@ -799,6 +799,8 @@ const walkingSchedule: WalkingScheduleType = {
     "18": {
       dager: [
         {
+          erFridag: true,
+          beskrivelseAvFridag: "Arbeiderenes dag",
           familie1: "Sonja",
           familie2: "Olivia",
         },
@@ -855,14 +857,20 @@ const walkingSchedule: WalkingScheduleType = {
           familie2: "Sonja",
         },
         {
+          erFridag: true,
+          beskrivelseAvFridag: "17. mai!",
           familie1: "Steinar",
           familie2: "Kristian",
         },
         {
+          erFridag: true,
+          beskrivelseAvFridag: "Kristi himmelfartsdag",
           familie1: "Kristian",
           familie2: "Thea",
         },
         {
+          erFridag: true,
+          beskrivelseAvFridag: "Bare fri",
           familie1: "Alfred",
           familie2: "Theo",
         },
@@ -895,6 +903,8 @@ const walkingSchedule: WalkingScheduleType = {
     "22": {
       dager: [
         {
+          erFridag: true,
+          beskrivelseAvFridag: "2. pinsedag",
           familie1: "Sonja",
           familie2: "Olivia",
         },
