@@ -1,3 +1,4 @@
+import { tr } from "date-fns/locale";
 import { WalkingScheduleType } from "../types/DayTypes";
 
 const walkingSchedule: WalkingScheduleType = {
@@ -637,6 +638,345 @@ const walkingSchedule: WalkingScheduleType = {
         {
           familie1: "Steinar",
           familie2: "Theo",
+        },
+        {
+          familie1: "Kristian",
+          familie2: "Thea",
+        },
+        {
+          familie1: "Alfred",
+          familie2: "Theo",
+        },
+      ],
+    },
+    "11": {
+      dager: [
+        {
+          familie1: "Sonja",
+          familie2: "Olivia",
+        },
+        {
+          familie1: "Theo",
+          familie2: "Alfred",
+        },
+        {
+          familie1: "Steinar",
+          familie2: "Olivia",
+        },
+        {
+          familie1: "Kristian",
+          familie2: "Thea",
+        },
+        {
+          familie1: "Alfred",
+          familie2: "Theo",
+        },
+      ],
+    },
+    "12": {
+      dager: [
+        {
+          familie1: "Sonja",
+          familie2: "Olivia",
+        },
+        {
+          familie1: "Sonja",
+          familie2: "Steinar",
+        },
+        {
+          familie1: "Steinar",
+          familie2: "Kristian",
+        },
+        {
+          familie1: "Kristian",
+          familie2: "Thea",
+        },
+        {
+          familie1: "Alfred",
+          familie2: "Theo",
+        },
+      ],
+    },
+    "13": {
+      dager: [
+        {
+          familie1: "Sonja",
+          familie2: "Olivia",
+        },
+        {
+          familie1: "Thea",
+          familie2: "Theo",
+        },
+        {
+          familie1: "Steinar",
+          familie2: "Alfred",
+        },
+        {
+          familie1: "Kristian",
+          familie2: "Thea",
+        },
+        {
+          familie1: "Alfred",
+          familie2: "Theo",
+        },
+      ],
+    },
+    "14": {
+      erFerieUke: true,
+    },
+    "15": {
+      dager: [
+        {
+          familie1: "Sonja",
+          familie2: "Olivia",
+        },
+        {
+          familie1: "Olivia",
+          familie2: "Sonja",
+        },
+        {
+          familie1: "Steinar",
+          familie2: "Kristian",
+        },
+        {
+          familie1: "Kristian",
+          familie2: "Thea",
+        },
+        {
+          familie1: "Alfred",
+          familie2: "Theo",
+        },
+      ],
+    },
+    "16": {
+      dager: [
+        {
+          familie1: "Sonja",
+          familie2: "Olivia",
+        },
+        {
+          familie1: "Steinar",
+          familie2: "Thea",
+        },
+        {
+          familie1: "Steinar",
+          familie2: "Theo",
+        },
+        {
+          familie1: "Kristian",
+          familie2: "Thea",
+        },
+        {
+          familie1: "Alfred",
+          familie2: "Theo",
+        },
+      ],
+    },
+    "17": {
+      dager: [
+        {
+          familie1: "Sonja",
+          familie2: "Olivia",
+        },
+        {
+          familie1: "Theo",
+          familie2: "Alfred",
+        },
+        {
+          familie1: "Steinar",
+          familie2: "Olivia",
+        },
+        {
+          familie1: "Kristian",
+          familie2: "Thea",
+        },
+        {
+          familie1: "Alfred",
+          familie2: "Theo",
+        },
+      ],
+    },
+    "18": {
+      dager: [
+        {
+          familie1: "Sonja",
+          familie2: "Olivia",
+        },
+        {
+          familie1: "Sonja",
+          familie2: "Steinar",
+        },
+        {
+          familie1: "Steinar",
+          familie2: "Kristian",
+        },
+        {
+          familie1: "Kristian",
+          familie2: "Thea",
+        },
+        {
+          familie1: "Alfred",
+          familie2: "Theo",
+        },
+      ],
+    },
+    "19": {
+      dager: [
+        {
+          familie1: "Sonja",
+          familie2: "Olivia",
+        },
+        {
+          familie1: "Thea",
+          familie2: "Theo",
+        },
+        {
+          familie1: "Steinar",
+          familie2: "Alfred",
+        },
+        {
+          familie1: "Kristian",
+          familie2: "Thea",
+        },
+        {
+          familie1: "Alfred",
+          familie2: "Theo",
+        },
+      ],
+    },
+    "20": {
+      dager: [
+        {
+          familie1: "Sonja",
+          familie2: "Olivia",
+        },
+        {
+          familie1: "Olivia",
+          familie2: "Sonja",
+        },
+        {
+          familie1: "Steinar",
+          familie2: "Kristian",
+        },
+        {
+          familie1: "Kristian",
+          familie2: "Thea",
+        },
+        {
+          familie1: "Alfred",
+          familie2: "Theo",
+        },
+      ],
+    },
+    "21": {
+      dager: [
+        {
+          familie1: "Sonja",
+          familie2: "Olivia",
+        },
+        {
+          familie1: "Steinar",
+          familie2: "Thea",
+        },
+        {
+          familie1: "Steinar",
+          familie2: "Theo",
+        },
+        {
+          familie1: "Kristian",
+          familie2: "Thea",
+        },
+        {
+          familie1: "Alfred",
+          familie2: "Theo",
+        },
+      ],
+    },
+    "22": {
+      dager: [
+        {
+          familie1: "Sonja",
+          familie2: "Olivia",
+        },
+        {
+          familie1: "Theo",
+          familie2: "Alfred",
+        },
+        {
+          familie1: "Steinar",
+          familie2: "Olivia",
+        },
+        {
+          familie1: "Kristian",
+          familie2: "Thea",
+        },
+        {
+          familie1: "Alfred",
+          familie2: "Theo",
+        },
+      ],
+    },
+    "23": {
+      dager: [
+        {
+          familie1: "Sonja",
+          familie2: "Olivia",
+        },
+        {
+          familie1: "Sonja",
+          familie2: "Steinar",
+        },
+        {
+          familie1: "Steinar",
+          familie2: "Kristian",
+        },
+        {
+          familie1: "Kristian",
+          familie2: "Thea",
+        },
+        {
+          familie1: "Alfred",
+          familie2: "Theo",
+        },
+      ],
+    },
+    "24": {
+      dager: [
+        {
+          familie1: "Sonja",
+          familie2: "Olivia",
+        },
+        {
+          familie1: "Thea",
+          familie2: "Theo",
+        },
+        {
+          familie1: "Steinar",
+          familie2: "Alfred",
+        },
+        {
+          familie1: "Kristian",
+          familie2: "Thea",
+        },
+        {
+          familie1: "Alfred",
+          familie2: "Theo",
+        },
+      ],
+    },
+    "25": {
+      dager: [
+        {
+          familie1: "Sonja",
+          familie2: "Olivia",
+        },
+        {
+          familie1: "Olivia",
+          familie2: "Sonja",
+        },
+        {
+          familie1: "Steinar",
+          familie2: "Kristian",
         },
         {
           familie1: "Kristian",
