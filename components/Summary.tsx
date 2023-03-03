@@ -10,7 +10,7 @@ const Summary = () => {
       <nav>
         <Link href={"/"}>Dagsoversikt</Link>
         <Link href={"/komplett"}>Komplett oversikt</Link>
-        {/* <Link href={"/ukeplaner"}>Ukeplaner for 1. trinn</Link> */}
+        <Link href={"/ukeplaner"}>Ukeplaner</Link>
       </nav>
     </section>
   );

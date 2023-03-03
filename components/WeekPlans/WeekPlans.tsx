@@ -1,12 +1,12 @@
-import { useFetchText } from "../../hooks/useFetch";
 import { WeekPlansTable } from "./WeekPlansTable";
+import useSWR from "swr";
 
 const WeekPlans = () => {
-  const { data, loading, error } = useFetchText("/api/ukeplaner");
+  const { data, error, isLoading } = useSWR("/api/ukeplaner");
 
   return (
     <div className="card">
-      {loading && "Laster..."}
+      {isLoading && "Laster..."}
       {error && error}
       {data && <WeekPlansTable input={data} />}
     </div>
