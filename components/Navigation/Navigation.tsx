@@ -1,11 +1,19 @@
 import Link from "next/link";
 
+import styles from "./Navigation.module.css";
+
 const Navigation = () => {
   return (
-    <nav>
-      <Link href={"/"}>Dagsoversikt</Link>
-      <Link href={"/komplett"}>Komplett oversikt</Link>
-      <Link href={"/ukeplaner"}>Ukeplaner</Link>
+    <nav className={styles.navigation}>
+      <Link href={"/"} className={styles.lenke}>
+        Dagsoversikt
+      </Link>
+      <Link href={"/komplett"} className={styles.lenke}>
+        Komplett oversikt
+      </Link>
+      <Link href={"/ukeplaner"} className={styles.lenke}>
+        Ukeplaner
+      </Link>
     </nav>
   );
 };

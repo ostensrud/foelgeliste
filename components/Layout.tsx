@@ -1,4 +1,5 @@
 import { ReactElement } from "react";
+import { Footer } from "./footer";
 import { AppHeader } from "./header";
 
 interface LayoutProps {
@@ -10,6 +11,7 @@ const Layout = ({ children }: LayoutProps) => {
     <div>
       <AppHeader />
       {children}
+      <Footer />
     </div>
   );
 };

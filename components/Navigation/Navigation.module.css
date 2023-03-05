@@ -1,0 +1,29 @@
+.navigation {
+  background-color: hsl(0 100% 100% / 0.9);
+}
+
+@media (prefers-color-scheme: dark) {
+  .navigation {
+    background-color: hsl(0 0% 0% / 0.9);
+  }
+}
+
+@media (max-width: 450px) {
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+
+    padding-block: 5rem;
+    border-top: 1px solid hsl(187 91% 47%);
+  }
+
+  .lenke {
+    padding-block: 1rem;
+  }
+}

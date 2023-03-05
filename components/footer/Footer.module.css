@@ -1,0 +1,20 @@
+.appFooter {
+  position: fixed;
+  bottom: 0;
+
+  width: 100%;
+}
+
+.menuButton {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}
+
+.bar {
+  width: 35px;
+  height: 5px;
+  background: hsl(0 0% 0%);
+  background-image: var(--dark-gradient-background);
+  margin: 6px 0;
+}
