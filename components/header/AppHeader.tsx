@@ -1,5 +1,5 @@
 import { getISOWeek } from "date-fns";
-import Link from "next/link";
+import { Navigation } from "../Navigation";
 
 import styles from "./AppHeader.module.css";
 
@@ -9,11 +9,7 @@ const AppHeader = () => {
   return (
     <header className={styles.summary}>
       <div className={styles.weekNumber}>Uke {ukenummer}</div>
-      <nav>
-        <Link href={"/"}>Dagsoversikt</Link>
-        <Link href={"/komplett"}>Komplett oversikt</Link>
-        <Link href={"/ukeplaner"}>Ukeplaner</Link>
-      </nav>
+      <Navigation />
     </header>
   );
 };
