@@ -79,33 +79,6 @@ td {
   margin-top: 1rem;
 }
 
-.summary {
-  display: flex;
-
-  font-size: 1rem;
-  margin: 0;
-  position: sticky;
-  top: 0;
-
-  width: 100%;
-
-  background-color: var(--dark-background);
-  color: var(--light-color);
-}
-
-.summary > .weekNumber {
-  border-right: 2px solid var(--light-color);
-  padding: 1rem;
-}
-
-.summary > nav {
-  padding: 1rem;
-}
-
-.summary > nav > *:not(:last-child) {
-  margin-right: 1rem;
-}
-
 .svg-icon {
   height: 48px;
   width: 48px;
@@ -172,6 +145,10 @@ svg.expanded {
   grid-template-columns: 25% auto;
 }
 
+.weekPlan tr {
+  border-bottom: 1px solid hsl(0, 0%, 18%);
+}
+
 @media (prefers-color-scheme: dark) {
   h2 {
     background-image: var(--dark-gradient-background);
@@ -179,9 +156,6 @@ svg.expanded {
     color: transparent;
   }
 
-  .summary {
-    box-shadow: var(--box-shadow-dark);
-  }
   .card {
     background-color: var(--dark-background);
   }

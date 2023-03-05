@@ -41,7 +41,7 @@ const WeekPlansTable = ({ input }: Props) => {
   });
 
   return (
-    <table>
+    <table className="weekPlan">
       <thead>
         <tr>
           <th>Uke</th>

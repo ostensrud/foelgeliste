@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import { Summary } from "./Summary";
+import { AppHeader } from "./header";
 
 interface LayoutProps {
   children: ReactElement;
@@ -8,7 +8,7 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <div>
-      <Summary />
+      <AppHeader />
       {children}
     </div>
   );

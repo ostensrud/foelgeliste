@@ -1,0 +1,32 @@
+.summary {
+  display: flex;
+  flex-direction: row;
+  font-size: 1rem;
+  margin: 0;
+  position: sticky;
+  top: 0;
+
+  width: 100%;
+
+  background-color: var(--dark-background);
+  color: var(--light-color);
+}
+
+.summary > .weekNumber {
+  border-right: 2px solid var(--light-color);
+  padding: 1rem;
+}
+
+.summary > nav {
+  padding: 1rem;
+}
+
+.summary > nav > *:not(:last-child) {
+  margin-right: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .summary {
+    box-shadow: var(--box-shadow-dark);
+  }
+} ;
