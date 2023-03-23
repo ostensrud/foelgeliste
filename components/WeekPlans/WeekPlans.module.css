@@ -2,3 +2,13 @@
   margin-top: 2rem;
   font-size: 1rem;
 }
+
+.weekPlan {
+  margin-top: 1rem;
+}
+
+.center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

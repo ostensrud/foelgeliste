@@ -2,13 +2,18 @@ import { WeekPlansTable } from "./WeekPlansTable";
 import useSWR from "swr";
 
 import styles from "./WeekPlans.module.css";
+import { Loader } from "../loader";
 
 const WeekPlans = () => {
   const { data, error, isLoading } = useSWR("/api/ukeplaner");
 
   return (
     <div className="card">
-      {isLoading && "Laster..."}
+      {isLoading && (
+        <div className={styles.center}>
+          <Loader />
+        </div>
+      )}
       {error && error}
       {data && <WeekPlansTable input={data} />}
       <aside className={styles.weekPlanLinks}>
