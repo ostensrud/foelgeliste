@@ -24,6 +24,39 @@ const importantDates: ImportantDateType[] = [
     title: "Julelunsj",
     description: "Gutter tar med oppskåret frukt, jenter tar med kjeks.",
   },
+  {
+    date: new Date("2023-06-15"),
+    title: "Innlevering av iPad",
+    description: "Torsdag 15.6 samler vi inn alle iPadene og ladere. Sørg for at det er synlig navnelapp innenfor dekselet.",
+  },
+  {
+    date: new Date("2023-06-16"),
+    title: "1A til Sjøholmen",
+
+    description: "Sjøholmen er et maritimt senter for alle skolene i Bærum kommune. 1.trinn er så heldige som får en dag til å fiske krabber og observere livet i fjæra. Alle får låne redningsvester og krabbesnøre der. Ta med mat, drikke, sitteunderlag og klær etter vær. Vi er ute hele dagen. Vi skal ta rutebuss og er tilbake til skoledagen slutter.",
+  },
+  {
+    date: new Date("2023-06-19"),
+    title: "1B til Sjøholmen",
+
+    description: "Sjøholmen er et maritimt senter for alle skolene i Bærum kommune. 1.trinn er så heldige som får en dag til å fiske krabber og observere livet i fjæra. Alle får låne redningsvester og krabbesnøre der. Ta med mat, drikke, sitteunderlag og klær etter vær. Vi er ute hele dagen. Vi skal ta rutebuss og er tilbake til skoledagen slutter.",
+  },
+  {
+    date: new Date("2023-06-20"),
+    title: "1C til Sjøholmen",
+
+    description: "Sjøholmen er et maritimt senter for alle skolene i Bærum kommune. 1.trinn er så heldige som får en dag til å fiske krabber og observere livet i fjæra. Alle får låne redningsvester og krabbesnøre der. Ta med mat, drikke, sitteunderlag og klær etter vær. Vi er ute hele dagen. Vi skal ta rutebuss og er tilbake til skoledagen slutter.",
+  },
+
+  {
+    date: new Date("2023-06-21"),
+    title: "1D til Sjøholmen",
+
+    description: "Sjøholmen er et maritimt senter for alle skolene i Bærum kommune. 1.trinn er så heldige som får en dag til å fiske krabber og observere livet i fjæra. Alle får låne redningsvester og krabbesnøre der. Ta med mat, drikke, sitteunderlag og klær etter vær. Vi er ute hele dagen. Vi skal ta rutebuss og er tilbake til skoledagen slutter.",
+  },
+
+
+
 ];
 
 export { importantDates };
