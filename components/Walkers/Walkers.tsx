@@ -14,15 +14,15 @@ const Walkers = () => {
   return (
     <>
       <ImportantDates data={importantDates} />
-      <Today dagensDato={dagensDato} walkingSchedule={walkingSchedule[aar]} />
-      <Tomorrow
+      <Today dagensDato={dagensDato} walkingSchedule={walkingSchedule} />
+      {/* <Tomorrow
         dagensDato={dagensDato}
         walkingSchedule={walkingSchedule[aar]}
       />
       <Schedule
         dagensDato={dagensDato}
         walkingSchedule={walkingSchedule[aar]}
-      />
+      /> */}
     </>
   );
 };

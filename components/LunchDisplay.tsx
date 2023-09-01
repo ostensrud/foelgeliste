@@ -1,26 +1,13 @@
 import { isSaturday, isSunday } from "date-fns";
-import { AarType } from "../types/DayTypes";
 import { Lunch } from "./Assets";
 
 interface LunchDisplayType {
-  walkingSchedule: AarType;
-  ukenummer: string;
-  ukedag: number;
   dato: Date;
 }
-export const LunchDisplay = ({
-  walkingSchedule,
-  ukenummer,
-  ukedag,
-  dato: dagensDato,
-}: LunchDisplayType) => {
-  if (
-    walkingSchedule[ukenummer].erFerieUke ||
-    isSaturday(dagensDato) ||
-    isSunday(dagensDato)
-  ) {
+export const LunchDisplay = ({ dato: dagensDato }: LunchDisplayType) => {
+  if (isSaturday(dagensDato) || isSunday(dagensDato)) {
     return null;
-  } else if (ukedag === 0 || ukedag === 3) {
+  } else if (dagensDato.getDay() === 0 || dagensDato.getDay() === 3) {
     return <Lunch />;
   }
   return null;

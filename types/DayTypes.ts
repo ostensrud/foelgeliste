@@ -1,27 +1,33 @@
 export interface DagType {
-  familie1: string;
-  familie2: string;
-  matservering?: boolean; // deprecated
+  // familie1: string;
+  // familie2: string;
+  // matservering?: boolean; // deprecated
+  date: string;
+  name: string;
   erFridag?: boolean;
   beskrivelseAvFridag?: string;
 }
 
 export interface UkeType {
-  erFerieUke?: boolean;
-  dager?: DagType[];
+  weekNumber: number;
+  days?: DagType[];
+  // erFerieUke?: boolean;
+  // dager?: DagType[];
 }
 
 export interface AarType {
-  [key: string]: UkeType;
+  year: number;
+  weeks?: UkeType[];
+  // [key: string]: UkeType;
 }
 
-export interface WalkingScheduleType {
-  [key: string]: AarType;
-}
+// export interface WalkingScheduleType {
+//   [key: string]: AarType;
+// }
 
 export interface DayProps {
   dagensDato: Date;
-  walkingSchedule: AarType;
+  walkingSchedule: AarType[];
 }
 
 export interface TodayProps extends DayProps {}
