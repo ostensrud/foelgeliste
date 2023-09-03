@@ -45,31 +45,6 @@ const CompleteList = () => {
           </section>
         );
       })}
-      {/* {aarsliste
-        .filter((aar) => Number.parseInt(aar, 10) >= innevaerendeAar)
-        .map((aar) => {
-          return (
-            <section key={aar}>
-              <h2>{aar}</h2>
-              {Object.keys(plan[aar]).map((ukenummer) => (
-                <div
-                  key={aar + "::" + ukenummer}
-                  ref={(element: HTMLDivElement) => {
-                    refList.current[ukenummer] = element;
-                  }}
-                  style={{ scrollMargin: "55px" }} // hoeyde paa header + 4px
-                >
-                  <WeekRow
-                    aar={aar}
-                    ukenummer={ukenummer}
-                    innevaerendeUke={innevaerendeUke.toString()}
-                    walkingSchedule={walkingSchedule}
-                  />
-                </div>
-              ))}
-            </section>
-          );
-        })} */}
     </main>
   );
 };

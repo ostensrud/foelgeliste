@@ -31,8 +31,7 @@ const WeekRow = (props: WeekProps) => {
           <thead>
             <tr>
               <th>Dag</th>
-              <th>Familie 1</th>
-              <th>Familie 2</th>
+              <th>Ansvarlig</th>
               <th></th>
             </tr>
           </thead>

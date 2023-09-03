@@ -4,17 +4,22 @@ import { format, isMonday, isThursday, parse } from "date-fns";
 
 const DayRow = ({ dag }: { dag: DagType }) => {
   const parsedDate = parse(dag.date, "yyyy-MM-dd", new Date());
-  if (dag.erFridag) {
+  const formattedDate = format(parsedDate, "dd.MM.yyyy");
+  if (dag.isDayOff) {
     return (
       <tr>
-        <td className={"ukedag"}>{format(parsedDate, "eeee")}</td>
-        <td colSpan={2}>{dag.beskrivelseAvFridag}</td>
+        <td className={"ukedag"}>
+          {formattedDate} {format(parsedDate, "eeee")}
+        </td>
+        <td colSpan={2}>{dag.dayOffDescription}</td>
       </tr>
     );
   }
   return (
     <tr>
-      <td className={"ukedag"}>{format(parsedDate, "eeee")}</td>
+      <td className={"ukedag"}>
+        {formattedDate} {format(parsedDate, "eeee")}
+      </td>
       <td>{dag.name}</td>
       <td>{isMonday(parsedDate) || isThursday(parsedDate) ? <Lunch /> : ""}</td>
     </tr>

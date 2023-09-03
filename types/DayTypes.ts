@@ -4,8 +4,8 @@ export interface DagType {
   // matservering?: boolean; // deprecated
   date: string;
   name: string;
-  erFridag?: boolean;
-  beskrivelseAvFridag?: string;
+  isDayOff?: boolean;
+  dayOffDescription?: string;
 }
 
 export interface UkeType {

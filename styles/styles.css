@@ -172,8 +172,10 @@ svg.expanded {
     fill: hsl(0, 0%, 0%);
   }
 
-  .ukedag {
+  .ukedag,
+  .totalOversikt_dato {
     font-weight: 300;
+    font-size: clamp(0.75rem, 3vw, 2rem);
   }
 
   .komplett {
