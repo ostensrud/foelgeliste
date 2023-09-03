@@ -1,54 +1,47 @@
 import { getYear } from "date-fns";
-import { WalkingScheduleType } from "../../../types/DayTypes";
+import { UkeType } from "../../../types/DayTypes";
 import { Hideaway } from "../../hideaway";
 import { DayRow } from "../dayrow";
 
 interface WeekProps {
-  aar: string;
-  ukenummer: string;
-  innevaerendeUke: string;
-  walkingSchedule: WalkingScheduleType;
+  ukeplan: UkeType;
+  aar: number;
+  innevaerendeUke: number;
 }
 
 const WeekRow = (props: WeekProps) => {
-  const { aar, ukenummer, innevaerendeUke } = props;
+  const { ukeplan, aar, innevaerendeUke } = props;
   const visUke =
-    getYear(new Date()) === Number.parseInt(aar, 10) &&
-    Number.parseInt(ukenummer, 10) >= Number.parseInt(innevaerendeUke, 10);
+    getYear(new Date()) === aar && ukeplan.weekNumber >= innevaerendeUke;
+
+  if (!ukeplan.days) {
+    return <div>OH NOES!</div>;
+  }
 
   return (
     <Hideaway
-      title={<h3>Uke {ukenummer}</h3>}
-      classNames={`uke ${innevaerendeUke === ukenummer ? "currentWeek" : ""}`}
+      title={<h3>Uke {ukeplan.weekNumber}</h3>}
+      classNames={`uke ${
+        innevaerendeUke === ukeplan.weekNumber ? "currentWeek" : ""
+      }`}
       isOpen={visUke}
     >
       <>
-        {props.walkingSchedule[aar][ukenummer].erFerieUke && (
-          <div>Ferieuke</div>
-        )}
-        {!props.walkingSchedule[aar][ukenummer].erFerieUke && (
-          <table>
-            <thead>
-              <tr>
-                <th>Dag</th>
-                <th>Familie 1</th>
-                <th>Familie 2</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              {props.walkingSchedule[aar][ukenummer].dager?.map(
-                (dag, index) => (
-                  <DayRow
-                    dag={dag}
-                    ukedagNummer={index}
-                    key={aar + "::" + ukenummer + "::" + index}
-                  />
-                )
-              )}
-            </tbody>
-          </table>
-        )}
+        <table>
+          <thead>
+            <tr>
+              <th>Dag</th>
+              <th>Familie 1</th>
+              <th>Familie 2</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {ukeplan.days?.map((dag) => (
+              <DayRow dag={dag} key={dag.date} />
+            ))}
+          </tbody>
+        </table>
       </>
     </Hideaway>
   );

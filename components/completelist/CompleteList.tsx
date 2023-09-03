@@ -23,7 +23,29 @@ const CompleteList = () => {
 
   return (
     <main className={"komplett"}>
-      {aarsliste
+      {plan.map((aar) => {
+        return (
+          <section key={aar.year}>
+            <h2>{aar.year}</h2>
+            {aar.weeks?.map((uker) => (
+              <div
+                key={aar.year + "::" + uker.weekNumber}
+                ref={(element: HTMLDivElement) =>
+                  (refList.current[aar.year + "::" + uker.weekNumber] = element)
+                }
+                style={{ scrollMargin: "55px" }} // hoeyde paa header + 4px
+              >
+                <WeekRow
+                  aar={aar.year}
+                  innevaerendeUke={getISOWeek(new Date())}
+                  ukeplan={uker}
+                />
+              </div>
+            ))}
+          </section>
+        );
+      })}
+      {/* {aarsliste
         .filter((aar) => Number.parseInt(aar, 10) >= innevaerendeAar)
         .map((aar) => {
           return (
@@ -47,7 +69,7 @@ const CompleteList = () => {
               ))}
             </section>
           );
-        })}
+        })} */}
     </main>
   );
 };
