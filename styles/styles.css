@@ -149,6 +149,10 @@ svg.expanded {
   border-bottom: 1px solid hsl(0, 0%, 18%);
 }
 
+.leadingUppercase {
+  text-transform: capitalize;
+}
+
 @media (prefers-color-scheme: dark) {
   h2 {
     background-image: var(--dark-gradient-background);

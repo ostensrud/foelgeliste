@@ -1,3 +1,4 @@
+import { nb } from "date-fns/locale";
 import { DagType } from "../../../types/DayTypes";
 import { Lunch } from "../../Assets";
 import { format, isMonday, isThursday, parse } from "date-fns";
@@ -9,7 +10,10 @@ const DayRow = ({ dag }: { dag: DagType }) => {
     return (
       <tr>
         <td className={"ukedag"}>
-          {formattedDate} {format(parsedDate, "eeee")}
+          {formattedDate}{" "}
+          <span className={"leadingUppercase"}>
+            {format(parsedDate, "eeee", { locale: nb })}
+          </span>
         </td>
         <td colSpan={2}>{dag.dayOffDescription}</td>
       </tr>
@@ -18,7 +22,10 @@ const DayRow = ({ dag }: { dag: DagType }) => {
   return (
     <tr>
       <td className={"ukedag"}>
-        {formattedDate} {format(parsedDate, "eeee")}
+        {formattedDate}{" "}
+        <span className={"leadingUppercase"}>
+          {format(parsedDate, "eeee", { locale: nb })}
+        </span>
       </td>
       <td>{dag.name}</td>
       <td>{isMonday(parsedDate) || isThursday(parsedDate) ? <Lunch /> : ""}</td>
