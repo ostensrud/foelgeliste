@@ -1,12 +1,12 @@
 import {
   format,
   isBefore,
-  isEqual,
   isMonday,
+  isSameDay,
   isThursday,
   parse,
 } from "date-fns";
-import { AarType, DagType } from "../types/DayTypes";
+import { DagType } from "../types/DayTypes";
 import { Lunch } from "./Assets";
 import { Card } from "./Card";
 
@@ -17,14 +17,8 @@ interface Props {
   currentWeek: number;
 }
 
-const WeekSchedule = ({
-  weekSchedule,
-  displayWeek,
-  currentDay,
-  currentWeek,
-}: Props) => {
+const WeekSchedule = ({ weekSchedule, displayWeek, currentWeek }: Props) => {
   const now = new Date();
-  const isFutureWeek = displayWeek > currentWeek;
 
   if (!weekSchedule) {
     return <div>Ingen ukeplan for uke {displayWeek}</div>;
@@ -32,7 +26,7 @@ const WeekSchedule = ({
 
   const classes = (date: string) => {
     const parsedDate = parse(date, "yyyy-MM-dd", now);
-    if (isEqual(parsedDate, now)) {
+    if (isSameDay(parsedDate, now)) {
       return "current";
     }
     if (isBefore(parsedDate, now)) {
