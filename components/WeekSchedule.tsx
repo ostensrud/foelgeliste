@@ -9,6 +9,7 @@ import {
 import { DagType } from "../types/DayTypes";
 import { Lunch } from "./Assets";
 import { Card } from "./Card";
+import nb from "date-fns/locale/nb";
 
 interface Props {
   weekSchedule?: DagType[];
@@ -50,7 +51,9 @@ const WeekSchedule = ({ weekSchedule, displayWeek, currentWeek }: Props) => {
             const parsedDate = parse(dag.date, "yyyy-MM-dd", new Date());
             return (
               <tr className={classes(dag.date)} key={index}>
-                <td className="ukedag">{format(parsedDate, "eeee")}</td>
+                <td className="ukedag leadingUppercase">
+                  {format(parsedDate, "eeee", { locale: nb })}
+                </td>
                 <td>{dag.name}</td>
                 <td>
                   {isMonday(parsedDate) || isThursday(parsedDate) ? (
