@@ -1,7 +1,6 @@
 import {
   addDays,
   format,
-  getDay,
   getISOWeek,
   getYear,
   isSaturday,
@@ -39,25 +38,6 @@ const Tomorrow = ({ dagensDato, walkingSchedule }: TomorrowProps) => {
   } else {
     content = <p>{dagenIMorgen?.name}</p>;
   }
-  // if (walkingSchedule[ukenummer].erFerieUke) {
-  //   content = <p>Fri hele uka!</p>;
-  // } else if (isSaturday(iMorgen) || isSunday(iMorgen)) {
-  //   content = <p>Da har vi fri!</p>;
-  // } else if (walkingSchedule[ukenummer].dager?.[ukedag].erFridag) {
-  //   content = (
-  //     <p>
-  //       {walkingSchedule[ukenummer].dager?.[ukedag].beskrivelseAvFridag ||
-  //         "Fridag"}
-  //     </p>
-  //   );
-  // } else {
-  //   content = (
-  //     <>
-  //       <p>{walkingSchedule[ukenummer].dager?.[ukedag].familie1}</p>
-  //       <p>{walkingSchedule[ukenummer].dager?.[ukedag].familie2}</p>
-  //     </>
-  //   );
-  // }
 
   return (
     <Card>
