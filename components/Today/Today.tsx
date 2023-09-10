@@ -44,6 +44,8 @@ const Today = ({ dagensDato, walkingSchedule }: TodayProps) => {
   let content;
   if (isSaturday(dagensDato) || isSunday(dagensDato)) {
     content = <p>Da har vi fri!</p>;
+  } else if (dagenIdag?.isDayOff) {
+    content = <p>{dagenIdag.dayOffDescription}</p>;
   } else {
     content = <p>{dagenIdag?.name}</p>;
   }
