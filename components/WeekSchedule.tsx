@@ -54,7 +54,7 @@ const WeekSchedule = ({ weekSchedule, displayWeek, currentWeek }: Props) => {
                 <td className="ukedag leadingUppercase">
                   {format(parsedDate, "eeee", { locale: nb })}
                 </td>
-                <td>{dag.name}</td>
+                <td>{dag.isDayOff ? dag.dayOffDescription : dag.name}</td>
                 <td>
                   {isMonday(parsedDate) || isThursday(parsedDate) ? (
                     <Lunch />
