@@ -1,7 +1,7 @@
 import { nb } from "date-fns/locale";
 import { DagType } from "../../../types/DayTypes";
 import { Lunch } from "../../Assets";
-import { format, isMonday, isThursday, parse } from "date-fns";
+import { format, isMonday, isWednesday, parse } from "date-fns";
 
 const DayRow = ({ dag }: { dag: DagType }) => {
   const parsedDate = parse(dag.date, "yyyy-MM-dd", new Date());
@@ -28,7 +28,9 @@ const DayRow = ({ dag }: { dag: DagType }) => {
         </span>
       </td>
       <td>{dag.name}</td>
-      <td>{isMonday(parsedDate) || isThursday(parsedDate) ? <Lunch /> : ""}</td>
+      <td>
+        {isMonday(parsedDate) || isWednesday(parsedDate) ? <Lunch /> : ""}
+      </td>
     </tr>
   );
 };
