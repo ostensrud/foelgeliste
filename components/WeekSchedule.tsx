@@ -3,7 +3,7 @@ import {
   isBefore,
   isMonday,
   isSameDay,
-  isThursday,
+  isWednesday,
   parse,
 } from "date-fns";
 import { DagType } from "../types/DayTypes";
@@ -56,7 +56,7 @@ const WeekSchedule = ({ weekSchedule, displayWeek, currentWeek }: Props) => {
                 </td>
                 <td>{dag.isDayOff ? dag.dayOffDescription : dag.name}</td>
                 <td>
-                  {isMonday(parsedDate) || isThursday(parsedDate) ? (
+                  {isMonday(parsedDate) || isWednesday(parsedDate) ? (
                     <Lunch />
                   ) : (
                     ""

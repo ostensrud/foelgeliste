@@ -1,4 +1,4 @@
-import { isSaturday, isSunday } from "date-fns";
+import { isMonday, isSaturday, isSunday, isWednesday } from "date-fns";
 import { Lunch } from "./Assets";
 
 interface LunchDisplayType {
@@ -7,7 +7,7 @@ interface LunchDisplayType {
 export const LunchDisplay = ({ dato: dagensDato }: LunchDisplayType) => {
   if (isSaturday(dagensDato) || isSunday(dagensDato)) {
     return null;
-  } else if (dagensDato.getDay() === 0 || dagensDato.getDay() === 3) {
+  } else if (isMonday(dagensDato) || isWednesday(dagensDato)) {
     return <Lunch />;
   }
   return null;
