@@ -54,6 +54,11 @@ const importantDates: ImportantDateType[] = [
     description: "Sjøholmen er et maritimt senter for alle skolene i Bærum kommune. 1.trinn er så heldige som får en dag til å fiske krabber og observere livet i fjæra. Alle får låne redningsvester og krabbesnøre der. Ta med mat, drikke, sitteunderlag og klær etter vær. Vi er ute hele dagen. Vi skal ta rutebuss og er tilbake til skoledagen slutter.",
   },
   {
+    date: new Date("2024-10-31"),
+    title: "👻🎃 Halloween 🦇🕷️",
+    description: "Tirsdag 31.oktober er det Halloween. Dette markerer vi også på SFO. Barna kan gjerne HA med kostyme, som kan tas på etter skoletid. Vi ønsker ikke gjenstander som sverd, pistoler, tryllestav, masker og lignende. Vi serverer frukt i vaniljesaus og har disko i gymsalen/Storstua fra 14.45-15.30."
+  },
+  {
     date: new Date("2024-11-10"),
     title: "💉 Vaksine 😱",
     description: "DTP-IPV vaksine. Barna har lov til å ta med en kosebamse."
