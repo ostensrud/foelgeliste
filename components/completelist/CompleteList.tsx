@@ -15,7 +15,9 @@ const CompleteList = () => {
   const innevaerendeUke = getISOWeek(new Date());
   const innevaerendeAar = getYear(new Date());
   useEffect(() => {
-    refList.current[innevaerendeUke.toString()]?.scrollIntoView({
+    refList.current[
+      innevaerendeAar.toString() + "::" + innevaerendeUke.toString()
+    ]?.scrollIntoView({
       behavior: "smooth",
       block: "start",
     });
