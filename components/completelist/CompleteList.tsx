@@ -21,7 +21,7 @@ const CompleteList = () => {
       behavior: "smooth",
       block: "start",
     });
-  }, [innevaerendeUke]);
+  }, [innevaerendeUke, innevaerendeAar]);
 
   return (
     <main className={"komplett"}>
