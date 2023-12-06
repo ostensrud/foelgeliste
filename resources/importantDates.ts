@@ -27,43 +27,71 @@ const importantDates: ImportantDateType[] = [
   {
     date: new Date("2023-06-15"),
     title: "Innlevering av iPad",
-    description: "Torsdag 15.6 samler vi inn alle iPadene og ladere. Sørg for at det er synlig navnelapp innenfor dekselet.",
+    description:
+      "Torsdag 15.6 samler vi inn alle iPadene og ladere. Sørg for at det er synlig navnelapp innenfor dekselet.",
   },
   {
     date: new Date("2023-06-16"),
     title: "1A til Sjøholmen",
 
-    description: "Sjøholmen er et maritimt senter for alle skolene i Bærum kommune. 1.trinn er så heldige som får en dag til å fiske krabber og observere livet i fjæra. Alle får låne redningsvester og krabbesnøre der. Ta med mat, drikke, sitteunderlag og klær etter vær. Vi er ute hele dagen. Vi skal ta rutebuss og er tilbake til skoledagen slutter.",
+    description:
+      "Sjøholmen er et maritimt senter for alle skolene i Bærum kommune. 1.trinn er så heldige som får en dag til å fiske krabber og observere livet i fjæra. Alle får låne redningsvester og krabbesnøre der. Ta med mat, drikke, sitteunderlag og klær etter vær. Vi er ute hele dagen. Vi skal ta rutebuss og er tilbake til skoledagen slutter.",
   },
   {
     date: new Date("2023-06-19"),
     title: "1B til Sjøholmen",
 
-    description: "Sjøholmen er et maritimt senter for alle skolene i Bærum kommune. 1.trinn er så heldige som får en dag til å fiske krabber og observere livet i fjæra. Alle får låne redningsvester og krabbesnøre der. Ta med mat, drikke, sitteunderlag og klær etter vær. Vi er ute hele dagen. Vi skal ta rutebuss og er tilbake til skoledagen slutter.",
+    description:
+      "Sjøholmen er et maritimt senter for alle skolene i Bærum kommune. 1.trinn er så heldige som får en dag til å fiske krabber og observere livet i fjæra. Alle får låne redningsvester og krabbesnøre der. Ta med mat, drikke, sitteunderlag og klær etter vær. Vi er ute hele dagen. Vi skal ta rutebuss og er tilbake til skoledagen slutter.",
   },
   {
     date: new Date("2023-06-20"),
     title: "1C til Sjøholmen",
 
-    description: "Sjøholmen er et maritimt senter for alle skolene i Bærum kommune. 1.trinn er så heldige som får en dag til å fiske krabber og observere livet i fjæra. Alle får låne redningsvester og krabbesnøre der. Ta med mat, drikke, sitteunderlag og klær etter vær. Vi er ute hele dagen. Vi skal ta rutebuss og er tilbake til skoledagen slutter.",
+    description:
+      "Sjøholmen er et maritimt senter for alle skolene i Bærum kommune. 1.trinn er så heldige som får en dag til å fiske krabber og observere livet i fjæra. Alle får låne redningsvester og krabbesnøre der. Ta med mat, drikke, sitteunderlag og klær etter vær. Vi er ute hele dagen. Vi skal ta rutebuss og er tilbake til skoledagen slutter.",
   },
   {
     date: new Date("2023-06-21"),
     title: "1D til Sjøholmen",
 
-    description: "Sjøholmen er et maritimt senter for alle skolene i Bærum kommune. 1.trinn er så heldige som får en dag til å fiske krabber og observere livet i fjæra. Alle får låne redningsvester og krabbesnøre der. Ta med mat, drikke, sitteunderlag og klær etter vær. Vi er ute hele dagen. Vi skal ta rutebuss og er tilbake til skoledagen slutter.",
+    description:
+      "Sjøholmen er et maritimt senter for alle skolene i Bærum kommune. 1.trinn er så heldige som får en dag til å fiske krabber og observere livet i fjæra. Alle får låne redningsvester og krabbesnøre der. Ta med mat, drikke, sitteunderlag og klær etter vær. Vi er ute hele dagen. Vi skal ta rutebuss og er tilbake til skoledagen slutter.",
   },
   {
     date: new Date("2023-10-31"),
     title: "👻🎃 Halloween 🦇🕷️",
-    description: "Tirsdag 31.oktober er det Halloween. Dette markerer vi også på SFO. Barna kan gjerne HA med kostyme, som kan tas på etter skoletid. Vi ønsker ikke gjenstander som sverd, pistoler, tryllestav, masker og lignende. Vi serverer frukt i vaniljesaus og har disko i gymsalen/Storstua fra 14.45-15.30."
+    description:
+      "Tirsdag 31.oktober er det Halloween. Dette markerer vi også på SFO. Barna kan gjerne HA med kostyme, som kan tas på etter skoletid. Vi ønsker ikke gjenstander som sverd, pistoler, tryllestav, masker og lignende. Vi serverer frukt i vaniljesaus og har disko i gymsalen/Storstua fra 14.45-15.30.",
   },
   {
     date: new Date("2023-11-10"),
     title: "💉 Vaksine 😱",
-    description: "DTP-IPV vaksine. Barna har lov til å ta med en kosebamse."
-  }
-
+    description: "DTP-IPV vaksine. Barna har lov til å ta med en kosebamse.",
+  },
+  {
+    date: new Date("2023-12-14"),
+    title: "🎄 Gløgg og julekonsert på SFO (15:00 - 16:00) 🎄",
+    description:
+      "SFO inviterer alle foresatte og søsken til førjulskos med gløgg og julekonsert torsdag 14. desember fra 15:00-16:00. Koret opprter utenfor hovedinngangen, de vil få nærmere beskjed om gjennomføring av dette.",
+  },
+  {
+    date: new Date("2023-12-18"),
+    title: "Ingen matservering på SFO denne dagen",
+    description: "Kun mat på onsdag denne uken. Da blir det nissegrøt.",
+  },
+  {
+    date: new Date("2023-12-19"),
+    title: "🎅Nissefest!🎅",
+    description:
+      "Barna må gjerne ha på en nisselue eller en morsom julegenser de har. (Planen fra SFO sier det blir nissefest tirsdag/onsdag i uke 51. Er det fest for alle begge dagene, eller fordeler de det utover? 🤷)",
+  },
+  {
+    date: new Date("2023-12-20"),
+    title: "🎅Nissefest!🎅",
+    description:
+      "Barna må gjerne ha på en nisselue eller en morsom julegenser de har. (Planen fra SFO sier det blir nissefest tirsdag/onsdag i uke 51. Er det fest for alle begge dagene, eller fordeler de det utover? 🤷)",
+  },
 ];
 
 export { importantDates };
